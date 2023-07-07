@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân</title>
+    <link rel="icon" href="/views/images/logotitle.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/views/css/Type2.css">
+    <link rel="stylesheet" href="/views/css/style.css">
+    <link rel="stylesheet" href="/views/css/profile.css">
+</head>
+
+<body style=" overflow-x: hidden;  ">
+
+    <!-- navbar -->
+    <!-- navbar -->
+    <nav class="d-block d-lg-none navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/trangchu">OBooks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/trangchu">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="/profile">Trang cá nhân</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lib">Thư viện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/post">Diễn đàn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <!-- navbar -->
+
+
+
+    <div class="stackmain2">
+
+
+        <div class="light3 col-12 d-none d-lg-block" style="height: 15vh;  top: 0; position: fixed; z-index: 90; opacity: 0.4;"></div>
+
+        <!-- tabup -->
+        <div>
+            <div id="tabup" class="tabup row justify-content-center">
+                <div class="">
+                    <div style="position: relative;">
+                        <button id="btn2" type="button" class="btn btn-dark" style="position: absolute;top:1rem; right:1rem;">đóng</button>
+                    </div>
+
+                </div>
+                <div class="col-11 p-5">
+
+                    <center style="font-size: 1rem; font-weight: bold;">
+                        TẢI SÁCH LÊN
+                    </center>
+
+                    <div class="row mt-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="tên sách" aria-label="Username">
+                            <span class="input-group-text">và</span>
+                            <input type="text" class="form-control" placeholder="bút danh" aria-label="Server">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">mô tả</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        </div>
+                    </div>
+                    <div class="row mt-3 ">
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                tính phí<input class="form-check-input mt-0 mx-1" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+                            <input type="text" class="form-control" placeholder="giá (VND)" aria-label="Text input with checkbox">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="row mt-3">
+                            <p>trang bìa:</p>
+                            <input type="file" name="" id="">
+                        </div>
+                        <div class="row mt-3">
+                            <p>file sách:</p>
+                            <input type="file" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <button id="btn22" type="button" class="btn btn-dark">tải sách lên</button>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div id="tabup2" class="tabup row justify-content-center">
+                <div class="">
+                    <div style="position: relative;">
+                        <button id="btn3" type="button" class="btn btn-dark" style="position: absolute;top:1rem; right:1rem;">đóng</button>
+                    </div>
+
+                </div>
+                <div class="col-11 p-5">
+
+                    <center>
+                        NHẬP THÔNG TIN
+                    </center>
+
+
+
+
+
+                </div>
+            </div>
+
+            <div id="tabup_bg" class="tabup_bg" style="position: fixed; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index:988">
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="d-none d-lg-block col-lg-2 " style="height: 10vh; position: fixed; top: 5vh;">
+                <div class=" p-3 col-12 mt-3" style=" left: 15px; height: 10vh;border-radius: 5px; background-image: url(/views/images/logo.png); background-size: cover;">
+
+                </div>
+                <div class="p-3 mx-2 mt-3" style="">
+                    <nav>
+                        <div class="btn-control col-12 mt-3 p-2" style=" ">
+                            <a href="/trangchu">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                                  </svg> Trang chủ
+                            </a>
+                        </div>
+                        <div class=" btn-control col-12 mt-1 p-2">
+                            <a href="/lib">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bookshelf" viewBox="0 0 16 16">
+                                    <path d="M2.5 0a.5.5 0 0 1 .5.5V2h10V.5a.5.5 0 0 1 1 0v15a.5.5 0 0 1-1 0V15H3v.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zM3 14h10v-3H3v3zm0-4h10V7H3v3zm0-4h10V3H3v3z"/>
+                                  </svg> Thư viện
+                            </a>
+                        </div>
+
+                        <div class=" btn-control col-12 mt-1 p-2" style=" font-weight: bold;
+                        opacity: 1; background-color: rgb(43, 43, 43);">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg> Trang cá nhân
+                            </a>
+                        </div>
+                        <div class=" btn-control col-12 mt-1 p-2">
+                            <a href="/post">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                  </svg> Diễn đàn
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <center id="lienhe" style="">
+                    <hr style="width: 80%; color: white;">
+                    <div class="cardlienhe" style="opacity: 1;">
+                        <span style="opacity: 1;">Liên hệ với chúng tôi</span>
+                        <a class="social-link" href="#">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#fb7c73;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
+                        </a>
+                        <a class="social-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path style="fill: rgb(67, 67, 255);" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>                            </a>
+                        <a class="social-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path style="fill: rgb(231, 111, 111);" d="M330.61 243.52a36.15 36.15 0 0 1 9.3 0c1.66-3.83 1.95-10.43.45-17.61-2.23-10.67-5.25-17.14-11.48-16.13s-6.47 8.74-4.24 19.42c1.26 6 3.49 11.14 6 14.32zM277.05 252c4.47 2 7.2 3.26 8.28 2.13 1.89-1.94-3.48-9.39-12.12-13.09a31.44 31.44 0 0 0-30.61 3.68c-3 2.18-5.81 5.22-5.41 7.06.85 3.74 10-2.71 22.6-3.48 7-.44 12.8 1.75 17.26 3.71zm-9 5.13c-9.07 1.42-15 6.53-13.47 10.1.9.34 1.17.81 5.21-.81a37 37 0 0 1 18.72-1.95c2.92.34 4.31.52 4.94-.49 1.46-2.22-5.71-8-15.39-6.85zm54.17 17.1c3.38-6.87-10.9-13.93-14.3-7s10.92 13.88 14.32 6.97zm15.66-20.47c-7.66-.13-7.95 15.8-.26 15.93s7.98-15.81.28-15.96zm-218.79 78.9c-1.32.31-6 1.45-8.47-2.35-5.2-8 11.11-20.38 3-35.77-9.1-17.47-27.82-13.54-35.05-5.54-8.71 9.6-8.72 23.54-5 24.08 4.27.57 4.08-6.47 7.38-11.63a12.83 12.83 0 0 1 17.85-3.72c11.59 7.59 1.37 17.76 2.28 28.62 1.39 16.68 18.42 16.37 21.58 9a2.08 2.08 0 0 0-.2-2.33c.03.89.68-1.3-3.35-.39zm299.72-17.07c-3.35-11.73-2.57-9.22-6.78-20.52 2.45-3.67 15.29-24-3.07-43.25-10.4-10.92-33.9-16.54-41.1-18.54-1.5-11.39 4.65-58.7-21.52-83 20.79-21.55 33.76-45.29 33.73-65.65-.06-39.16-48.15-51-107.42-26.47l-12.55 5.33c-.06-.05-22.71-22.27-23.05-22.57C169.5-18-41.77 216.81 25.78 273.85l14.76 12.51a72.49 72.49 0 0 0-4.1 33.5c3.36 33.4 36 60.42 67.53 60.38 57.73 133.06 267.9 133.28 322.29 3 1.74-4.47 9.11-24.61 9.11-42.38s-10.09-25.27-16.53-25.27zm-316 48.16c-22.82-.61-47.46-21.15-49.91-45.51-6.17-61.31 74.26-75.27 84-12.33 4.54 29.64-4.67 58.49-34.12 57.81zM84.3 249.55C69.14 252.5 55.78 261.09 47.6 273c-4.88-4.07-14-12-15.59-15-13.01-24.85 14.24-73 33.3-100.21C112.42 90.56 186.19 39.68 220.36 48.91c5.55 1.57 23.94 22.89 23.94 22.89s-34.15 18.94-65.8 45.35c-42.66 32.85-74.89 80.59-94.2 132.4zM323.18 350.7s-35.74 5.3-69.51-7.07c6.21-20.16 27 6.1 96.4-13.81 15.29-4.38 35.37-13 51-25.35a102.85 102.85 0 0 1 7.12 24.28c3.66-.66 14.25-.52 11.44 18.1-3.29 19.87-11.73 36-25.93 50.84A106.86 106.86 0 0 1 362.55 421a132.45 132.45 0 0 1-20.34 8.58c-53.51 17.48-108.3-1.74-126-43a66.33 66.33 0 0 1-3.55-9.74c-7.53-27.2-1.14-59.83 18.84-80.37 1.23-1.31 2.48-2.85 2.48-4.79a8.45 8.45 0 0 0-1.92-4.54c-7-10.13-31.19-27.4-26.33-60.83 3.5-24 24.49-40.91 44.07-39.91l5 .29c8.48.5 15.89 1.59 22.88 1.88 11.69.5 22.2-1.19 34.64-11.56 4.2-3.5 7.57-6.54 13.26-7.51a17.45 17.45 0 0 1 13.6 2.24c10 6.64 11.4 22.73 11.92 34.49.29 6.72 1.1 23 1.38 27.63.63 10.67 3.43 12.17 9.11 14 3.19 1.05 6.15 1.83 10.51 3.06 13.21 3.71 21 7.48 26 12.31a16.38 16.38 0 0 1 4.74 9.29c1.56 11.37-8.82 25.4-36.31 38.16-46.71 21.68-93.68 14.45-100.48 13.68-20.15-2.71-31.63 23.32-19.55 41.15 22.64 33.41 122.4 20 151.37-21.35.69-1 .12-1.59-.73-1-41.77 28.58-97.06 38.21-128.46 26-4.77-1.85-14.73-6.44-15.94-16.67 43.6 13.49 71 .74 71 .74s2.03-2.79-.56-2.53zm-68.47-5.7zm-83.4-187.5c16.74-19.35 37.36-36.18 55.83-45.63a.73.73 0 0 1 1 1c-1.46 2.66-4.29 8.34-5.19 12.65a.75.75 0 0 0 1.16.79c11.49-7.83 31.48-16.22 49-17.3a.77.77 0 0 1 .52 1.38 41.86 41.86 0 0 0-7.71 7.74.75.75 0 0 0 .59 1.19c12.31.09 29.66 4.4 41 10.74.76.43.22 1.91-.64 1.72-69.55-15.94-123.08 18.53-134.5 26.83a.76.76 0 0 1-1-1.12z"/></svg>                            </a>
+
+                        </a>
+                        <a class="social-link" href="#">
+                            <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
+
+                    </div>
+                    <hr style="width: 80%; color: white;">
+                    <br> <a id="dangxuat" href="/">Đăng xuất</a>
+                </center>
+            </div>
+
+            <!-- center -->
+            <div class="col-12 col-lg-8" style=" height: 100vh;">
+                <h5 class="mt-5 mx-5" style="color: white;font-family: Pacifico;">
+                    thu nhập và chiến lược
+                    </h3>
+                    <center>
+
+                        <div class="col-12 " style="background-color: #ffefef; border-radius: 5px;">
+
+                            <script src="https://www.amcharts.com/lib/3/amcharts.js?x"></script>
+                            <script src="https://www.amcharts.com/lib/3/serial.js?x"></script>
+                            <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+                            <div id="chartdiv"></div>
+
+
+
+                        </div>
+                    </center>
+
+                    <h3 class="mt-5 mx-5" style="color: white;
+              ">
+                        Sách của bạn
+                    </h3>
+                    <center>
+
+                        <div class="col-11 " style="background-color: #3d3f3f; height: auto; border-radius: 10px;">
+                            <div>
+                                <div id="addcardhere" class="cardslider" style="transform: translateX(0) !important;">
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <a href="/test">
+                                            <div>
+                                                <img src="/views/images/test/Obooks.png" alt="." class="card-img-top img-avatar" />
+                                            </div>
+                                            <div>
+                                                <h3 class="cardName">test</h3>
+                                                <a href="">
+                                                    <div style="text-decoration: none !important;
+                                            font-size: 12px !important;" class="card-text">0 lượt đọc </div>
+
+                                                </a>
+                                            </div>
+                                        </a>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/mybook1.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">người hùng áo trắng và kẻ địch vô hình</h3>
+                                            <a href="">
+                                                <div style="text-decoration: none !important;
+                                            font-size: 12px !important;" class="card-text">850.234 lượt đọc </div>
+
+                                            </a>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/mybook2.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">cẩm nang du lịch Việt Nam</h3>
+                                            <a href="">
+                                                <div style="text-decoration: none !important;
+                                            font-size: 12px !important;" class="card-text">3.650 lượt đọc </div>
+
+                                            </a>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/mybook3.png" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">trận chiến nội tâm của người hay nghĩ</h3>
+                                            <a href="">
+                                                <div style="text-decoration: none !important;
+                                            font-size: 12px !important;" class="card-text">1.565 lượt đọc </div>
+
+                                            </a>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+
+                    <h3 class="mt-5 mx-5" style="color: white;
+              ">
+                        Sách đọc gần đây
+                    </h3>
+                    <center>
+
+                        <div class="col-11 " style="background-color: #3d3f3f; height: auto; border-radius: 10px;">
+                            <div>
+                                <div class="cardslider" style="transform: translateX(0) !important;">
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st61.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Những tấm lòng Cao Cả</h3>
+                                            <div class="card-text">Người dịch: Hoàng Thiếu Sơn</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st62.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Đừng lựa chọn An Nhàn khi còn trẻ</h3>
+                                            <div class="card-text">Tác giả: Cảnh Thiên</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st63.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Những chuyện hay viết cho thiếu nhi</h3>
+                                            <div class="card-text">Tác giả: Tô Hoài</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st64.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Tuổi trẻ đáng giá bao nhiêu</h3>
+                                            <div class="card-text">Tác giả: ROSIE NGUYỄN</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st65.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Tôi tài giỏi bạn cũng thế!</h3>
+                                            <div class="card-text">Dịch giả: Trần Đăng Khoa</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st66.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Vì Thương</h3>
+                                            <div class="card-text">Trái tim cha mẹ, quê nhà của con</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st67.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Thang Máy và Thang Cuốn</h3>
+                                            <div class="card-text">Chủ biên: ThS. Hoa Văn Ngũ</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st69.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Ngôi nhà quái dị</h3>
+                                            <div class="card-text">Dịch: Anh Trần</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st610.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">The Book Thief</h3>
+                                            <div class="card-text">Tác giả: Markus Zusak</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st611.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">E.G.Workbook for Dummies</h3>
+                                            <div class="card-text">Hundreds of practice question</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st612.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Pefer Pan</h3>
+                                            <div class="card-text">Tác giả: J.M.Barrie</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st613.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Don Quixote CERVANTES</h3>
+                                            <div class="card-text">WORDSWORTH CLASSICS</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/st614.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Diary of a Cricket</h3>
+                                            <div class="card-text">Tác giả: Tô Hoài</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img13.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Think And Grow Rich</h3>
+                                            <div class="card-text">Người dịch: Thảo Triệu</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img14.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hình Hài Của Nước</h3>
+                                            <div class="card-text">Dịch: Thu Phương-Hồng Thu</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img15.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Perfect</h3>
+                                            <div class="card-text">Tác giả: Rachel Joyce</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img16.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Life of Pi</h3>
+                                            <div class="card-text">Uppdating...</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img17.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hoàng Tử Bé</h3>
+                                            <div class="card-text">Nhà xuất bản Kim Đồng</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img18.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Việt Nam Phong Tục</h3>
+                                            <div class="card-text">Tác giả: Phan Kế Bình</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img19.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hai Số Phận</h3>
+                                            <div class="card-text">Tác giả: Jeffrey Archer</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img20.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">IRON HANS</h3>
+                                            <div class="card-text">Tuyển tập truyện cổ tích thế giới</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img21.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">NGA</h3>
+                                            <div class="card-text">Truyện ngắn đặc sắc</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img22.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Không Gia Đình</h3>
+                                            <div class="card-text">Tác giả: Hector Malot</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img23.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Thúy Kiều</h3>
+                                            <div class="card-text">Bùi Ký và Trân Trọng Kim hiệu khảo</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img24.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Đối thoại cùng ma</h3>
+                                            <div class="card-text">Tác giả: Eva Ibbotson</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img25.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nếu chỉ còn một ngày để sống</h3>
+                                            <div class="card-text">Tác giả: NIGOLA YOON</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img26.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Những Người Khốn Khổ</h3>
+                                            <div class="card-text">Tác giả: VICTOR HUGO</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img27.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Cái Chết Huy Hoàng</h3>
+                                            <div class="card-text">Tác giả: J. D. ROBB</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img28.JPG" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Harry Potter và hoàng tử lai</h3>
+                                            <div class="card-text">Nhà xuất bản Trẻ</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img29.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName"> Tiếng Hán-Tạng nguyên thủy</h3>
+                                            <div class="card-text">Bài chi tiết: Phương ngữ tiếng Hán</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img30.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">The Fault In our Stars</h3>
+                                            <div class="card-text">Tác giả: John Green</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img31.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hỏa Ngục</h3>
+                                            <div class="card-text">Tác giả: DAN BROWN</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img32.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hai Đứa Trẻ</h3>
+                                            <div class="card-text">Tác giả: Thạch Lam</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img33.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nếu được yêu như thế</h3>
+                                            <div class="card-text">Tác giả: Nguyên Ngộ Không</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img34.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">The Sun The Moon The Stars</h3>
+                                            <div class="card-text">Tác giả: Junot Diaz</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img35.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Săn Cá Thần</h3>
+                                            <div class="card-text">Tác giả: Đặng Thiếu Quang</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img36.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Ngôi Nhà Nghìn Hành Lang</h3>
+                                            <div class="card-text">Tác giả: Thu Phương</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                    <h3 class="mt-5 mx-5" style="color: white;font-family: Pacifico;">
+                        Sách gợi ý
+                    </h3>
+                    <center>
+
+                        <div class="col-11 " style="background-color: #3d3f3f; height: auto; border-radius: 10px; margin-bottom: 10px;">
+                            <div>
+
+                                <div class="cardslider" style="transform: translateX(0) !important;">
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt1.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Quân Khu Nam Đồng</h3>
+                                            <div class="card-text">Truyện BÌNH CA</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt2.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Tôi Tài giỏi, Ban cũng thế</h3>
+                                            <div class="card-text">Tác giả: ADAM KHOO</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt3.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Trà Hoa Nữ</h3>
+                                            <div class="card-text">Tác giả: Alexandre Dumas</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt5.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Vô cùng Tàn Nhẫn vô cùng Yêu Thương</h3>
+                                            <div class="card-text">Tác giả: Sara Imas</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt6.png" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Tuổi trả đáng giá bao nhiêu?</h3>
+                                            <div class="card-text">Tác giả: Rosie Nguyễn</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt7.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Đừng lựa chọn An Nhàn khi còn trẻ</h3>
+                                            <div class="card-text">Tác giả: Cánh Thiên</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt8.png" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Mắt Biếc</h3>
+                                            <div class="card-text">Tác giả: Nguyễn Nhật Ánh</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt9.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hoàng Tử Bé</h3>
+                                            <div class="card-text">Người dịch: Nguyễn Thành Long</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt10.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Không gia đình</h3>
+                                            <div class="card-text">Tác giả: HECTOR MALOT</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt11.png" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nghiệp Tình Yêu</h3>
+                                            <div class="card-text">Người dịch: Hà Tứ</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt12.png" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Tuổi trẻ đáng giá bao nhiêu?</h3>
+                                            <div class="card-text">Tác giả: Rosie Nguyễn</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt2.jpeg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Cô gái năm ấy chúng ta cùng theo đuổi</h3>
+                                            <div class="card-text">Người dịch: Lục Hương</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/baikiemtragiuaki/yt4.jpeg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Từ một phía cũng là tình yêu</h3>
+                                            <div class="card-text">"Tình yêu đẹp nhất là tình chưa từng được thổ lộ"</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img13.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Think And Grow Rich</h3>
+                                            <div class="card-text">Người dịch: Thảo Triệu</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img14.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hình Hài Của Nước</h3>
+                                            <div class="card-text">Dịch: Thu Phương-Hồng Thu</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img15.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Perfect</h3>
+                                            <div class="card-text">Tác giả: Rachel Joyce</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img16.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Life of Pi</h3>
+                                            <div class="card-text">Uppdating...</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img17.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hoàng Tử Bé</h3>
+                                            <div class="card-text">Nhà xuất bản Kim Đồng</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img18.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Việt Nam Phong Tục</h3>
+                                            <div class="card-text">Tác giả: Phan Kế Bình</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img19.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hai Số Phận</h3>
+                                            <div class="card-text">Tác giả: Jeffrey Archer</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img20.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">IRON HANS</h3>
+                                            <div class="card-text">Tuyển tập truyện cổ tích thế giới</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img21.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">NGA</h3>
+                                            <div class="card-text">Truyện ngắn đặc sắc</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img22.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Không Gia Đình</h3>
+                                            <div class="card-text">Tác giả: Hector Malot</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img23.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nguyễn Du truyện Thúy Kiều</h3>
+                                            <div class="card-text">Bùi Ký và Trân Trọng Kim hiệu khảo</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img24.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Đối thoại cùng ma</h3>
+                                            <div class="card-text">Tác giả: Eva Ibbotson</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img25.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nếu chỉ còn một ngày để sống</h3>
+                                            <div class="card-text">Tác giả: NIGOLA YOON</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img26.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Những Người Khốn Khổ</h3>
+                                            <div class="card-text">Tác giả: VICTOR HUGO</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img27.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Cái Chết Huy Hoàng</h3>
+                                            <div class="card-text">Tác giả: J. D. ROBB</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img28.JPG" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Harry Potter và hoàng tử lai</h3>
+                                            <div class="card-text">Nhà xuất bản Trẻ</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img29.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName"> Tiếng Hán-Tạng nguyên thủy</h3>
+                                            <div class="card-text">Bài chi tiết: Phương ngữ tiếng Hán</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img30.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">The Fault In our Stars</h3>
+                                            <div class="card-text">Tác giả: John Green</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img31.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hỏa Ngục</h3>
+                                            <div class="card-text">Tác giả: DAN BROWN</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img32.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Hai Đứa Trẻ</h3>
+                                            <div class="card-text">Tác giả: Thạch Lam</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img33.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Nếu được yêu như thế</h3>
+                                            <div class="card-text">Tác giả: Nguyên Ngộ Không</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img34.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">The Sun The Moon The Stars</h3>
+                                            <div class="card-text">Tác giả: Junot Diaz</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img35.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Săn Cá Thần</h3>
+                                            <div class="card-text">Tác giả: Đặng Thiếu Quang</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <div>
+                                            <img src="/views/images/img36.jpg" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                        <div>
+                                            <h3 class="cardName">Ngôi Nhà Nghìn Hành Lang</h3>
+                                            <div class="card-text">Tác giả: Thu Phương</div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </center>
+            </div>
+            <!-- /center -->
+            <!-- right -->
+            <!-- right -->
+            <div class="d-none d-lg-block col-lg-2" style=" position: fixed; right: 5px;">
+
+                <div class="col-12 mt-5" style="background-color: #3d3f3f ; ">
+                    <div>
+                        <p style="color: white;">
+                            Số dư : 136.000.000 VND
+                        </p>
+                    </div>
+                </div>
+                <div id="btn1" class="col-12 mt-1" style=" border: 1px solid white; border-radius: 5px;">
+                    <p id="text1" style="color: white; text-align: center;">
+                        tải sách lên
+                    </p>
+                </div>
+                <div id="btnruttien" class="col-12 mt-1" style=" border: 1px solid white; border-radius: 5px;">
+
+                    <div id="btnruttien">
+                        <p id="text1" style="color: white; text-align: center;">
+                            rút tiền
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-12 mt-1" style=" border: 1px solid white; border-radius: 5px;">
+                    <p id="text1" style="color: white; text-align: center;">
+                        nạp tiền
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scroll to top -->
+    <a href="#">
+        <div id="totop">
+            <div style="width: 50px; height: 50px; background-color: #D3C0F9; position: fixed; bottom: 20px; border-radius: 50%;
+            right: 30px; z-index: 99; display: flex; align-items:center ; justify-content: center;">
+                <img src="/views/images/arrow.png" style="height: 30px; width: 30px; transform: rotate(-90deg); margin-top: -4px;" alt="">
+            </div>
+        </div>
+    </a>
+
+
+
+
+    <div class="animation-area">
+        <ul class="box-area" style="">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script>
+        const cursor = document.querySelector(".cursor");
+        let b = document.getElementById('b');
+        let o = document.getElementById('o');
+        let o2 = document.getElementById('o2');
+        let k = document.getElementById('k');
+        let l = document.getElementById('light');
+        let l2 = document.getElementById('light2');
+        let v = document.getElementById('video1');
+        let t = document.getElementById('title2');
+        let i = document.getElementById('img1');
+        let chartarea = document.getElementById('chartarea');
+        var timeout;
+        let main2 = document.getElementById('main2');
+
+        let totop = document.getElementById('totop');
+
+        const slide = document.querySelectorAll('.cardslider');
+        const slide2 = document.querySelectorAll('.card-link');
+        const box1 = document.querySelectorAll('.box1');
+        const box2 = document.querySelectorAll('.box2');
+        const title5 = document.querySelectorAll('.title5');
+        const line2 = document.querySelectorAll('.line2');
+        const trans1 = document.querySelectorAll('.trans1');
+
+        function on() {
+
+            l.classList.toggle("off");
+            l2.classList.toggle("off");
+
+
+        }
+
+
+        window.addEventListener('scroll', function()
+
+            {
+
+                var scroll_y = this.scrollY;
+
+                if (scroll_y > 2000) {
+                    totop.style.display = 'block';
+                } else {
+                    totop.style.display = 'none';
+                }
+                //transition
+                const triggerbottom = 9000;
+
+                slide.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show');
+                    } else {
+                        cardslider.classList.remove('show');
+                    }
+                })
+
+                slide2.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show');
+                    } else {
+                        cardslider.classList.remove('show');
+                    }
+                })
+                box1.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show');
+                    } else {
+                        cardslider.classList.remove('show');
+                    }
+                })
+                box2.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show');
+                    } else {
+                        cardslider.classList.remove('show');
+                    }
+                })
+                title5.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show2');
+                    } else {
+                        cardslider.classList.remove('show2');
+                    }
+                })
+                line2.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show2');
+                    } else {
+                        cardslider.classList.remove('show2');
+                    }
+                })
+                trans1.forEach((cardslider) => {
+                    const boxtop = cardslider.getBoundingClientRect().top;
+
+                    if (boxtop < triggerbottom) {
+                        cardslider.classList.add('show2');
+                    } else {
+                        cardslider.classList.remove('show2');
+                    }
+                })
+
+            });
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        var chartData = [{
+            "date": "2023-06-11",
+            "distance": 227,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townName2": "người hùng áo trắng",
+            "townSize": 25,
+            "latitude": 40.71,
+            "duration": 408
+        }, {
+            "date": "2023-06-12",
+            "distance": 371,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 14,
+            "latitude": 38.89,
+            "duration": 482
+        }, {
+            "date": "2023-06-13",
+            "distance": 433,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 6,
+            "latitude": 34.22,
+            "duration": 562
+        }, {
+            "date": "2023-06-14",
+            "distance": 345,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 7,
+            "latitude": 30.35,
+            "duration": 379
+        }, {
+            "date": "2023-06-15",
+            "distance": 480,
+            "townName": "tcntcnhn 90%,cndlvn 10%,nhatcktvh 10%",
+            "townName2": "trận chiến nội tâm của người hay nghĩ",
+            "townSize": 10,
+            "latitude": 25.83,
+            "duration": 501
+        }, {
+            "date": "2023-06-16",
+            "distance": 386,
+            "townName": "tcntcnhn 90%,cndlvn 10%,nhatcktvh 10%",
+            "townSize": 7,
+            "latitude": 30.46,
+            "duration": 443
+        }, {
+            "date": "2023-06-17",
+            "distance": 348,
+            "townName": "tcntcnhn 90%,cndlvn 10%,nhatcktvh 10%",
+            "townSize": 10,
+            "latitude": 29.94,
+            "duration": 405
+        }, {
+            "date": "2023-06-18",
+            "distance": 238,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townName2": "người anh hùng áo trắng và kẻ địch vô hình",
+            "townSize": 16,
+            "latitude": 29.76,
+            "duration": 309
+        }, {
+            "date": "2023-06-19",
+            "distance": 218,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 17,
+            "latitude": 32.8,
+            "duration": 287
+        }, {
+            "date": "2023-06-20",
+            "distance": 349,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 11,
+            "latitude": 35.49,
+            "duration": 485
+        }, {
+            "date": "2023-06-21",
+            "distance": 603,
+            "townName": "nhatvkdvh 90%,cndlvn 10%,tcntcnhn 10%",
+            "townSize": 10,
+            "latitude": 39.1,
+            "duration": 890
+        }, {
+            "date": "2023-06-22",
+            "distance": 534,
+            "townName": "cndlvn 90%,nhatvkdvh 10%,tcntcnhn 10%",
+            "townName2": "cẩm nang du lịch VN",
+            "townSize": 18,
+            "latitude": 39.74,
+            "duration": 810
+        }, {
+            "date": "2023-06-23",
+            "townName": "cndlvn 90%,nhatvkdvh 10%,tcntcnhn 10%",
+            "townSize": 12,
+            "distance": 425,
+            "duration": 670,
+            "latitude": 40.75,
+            "alpha": 0.4
+        }, {
+            "date": "2023-06-24",
+            "latitude": 36.1,
+            "duration": 470,
+            "townName": "tcntcnhn 90%,nhatvkdvh 10%,cndlvn 10%",
+            "townName2": "trận chiến nội tâm của người hay nghĩ",
+            "bulletClass": "lastBullet"
+        }, {
+            "date": "2023-06-25"
+        }, {
+            "date": "2023-06-26"
+        }, {
+            "date": "2023-06-27"
+        }, {
+            "date": "2023-06-28"
+        }, {
+            "date": "2023-06-29"
+        }];
+        var chart = AmCharts.makeChart("chartdiv", {
+            type: "serial",
+            theme: "dark",
+            dataDateFormat: "YYYY-MM-DD",
+            dataProvider: chartData,
+
+            addClassNames: true,
+            startDuration: 1,
+            color: "#FFFFFF",
+            marginLeft: 0,
+
+            categoryField: "date",
+            categoryAxis: {
+                parseDates: true,
+                minPeriod: "DD",
+                autoGridCount: false,
+                gridCount: 50,
+                gridAlpha: 0.1,
+                gridColor: "#FFFFFF",
+                axisColor: "#555555",
+                dateFormats: [{
+                    period: 'DD',
+                    format: 'DD'
+                }, {
+                    period: 'WW',
+                    format: 'MMM DD'
+                }, {
+                    period: 'MM',
+                    format: 'MMM'
+                }, {
+                    period: 'YYYY',
+                    format: 'YYYY'
+                }]
+            },
+
+            valueAxes: [{
+                id: "a1",
+                title: "thu nhập (K VND)",
+                gridAlpha: 0,
+                axisAlpha: 0
+            }, {
+                id: "a2",
+                position: "right",
+                gridAlpha: 0,
+                axisAlpha: 0,
+                labelsEnabled: false
+            }, {
+                id: "a3",
+                title: "thời gian đọc",
+                position: "right",
+                gridAlpha: 0,
+                axisAlpha: 0,
+                inside: true,
+                duration: "mm",
+                durationUnits: {
+                    DD: "d. ",
+                    hh: "h ",
+                    mm: "min",
+                    ss: ""
+                }
+            }],
+            graphs: [{
+                id: "g1",
+                valueField: "distance",
+                title: "",
+                type: "column",
+                fillAlphas: 0.9,
+                valueAxis: "a1",
+                balloonText: "[[value]] k",
+                legendValueText: "[[value]] k",
+                legendPeriodValueText: "thu nhập: [[value.sum]]m",
+                lineColor: "#263138",
+                alphaField: "alpha",
+            }, {
+                id: "g3",
+                title: "số giờ đọc",
+                valueField: "duration",
+                type: "line",
+                valueAxis: "a3",
+                lineColor: "#ff5755",
+                balloonText: "[[value]]",
+                lineThickness: 1,
+                legendValueText: "[[value]]",
+                bullet: "square",
+                bulletBorderColor: "#ff5755",
+                bulletBorderThickness: 1,
+                bulletBorderAlpha: 1,
+                dashLengthField: "dashLength",
+                animationPlayed: true
+            }, {
+                id: "g2",
+                valueField: "latitude",
+                classNameField: "bulletClass",
+                title: "tên sách/ tỉ lệ:",
+                type: "line",
+                valueAxis: "a2",
+                lineColor: "#786c56",
+                lineThickness: 1,
+                legendValueText: "[[description]]",
+                descriptionField: "townName",
+                bullet: "round",
+                bulletSizeField: "townSize",
+                bulletBorderColor: "#786c56",
+                bulletBorderAlpha: 1,
+                bulletBorderThickness: 2,
+                bulletColor: "#000000",
+                labelText: "[[townName2]]",
+                labelPosition: "right",
+                balloonText: "[[value]]",
+                showBalloon: true,
+                animationPlayed: true,
+            }],
+
+            chartCursor: {
+                zoomable: false,
+                categoryBalloonDateFormat: "DD",
+                cursorAlpha: 0,
+                valueBalloonsEnabled: false
+            },
+            legend: {
+                bulletType: "round",
+                equalWidths: false,
+                valueWidth: 120,
+                useGraphSettings: true,
+                color: "#FFFFFF"
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        const btn = document.getElementById('btn1');
+        const tabup = document.getElementById('tabup');
+        const tabup2 = document.getElementById('tabup2');
+        const tabup_bg = document.getElementById('tabup_bg');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const btnruttien = document.getElementById('btnruttien');
+        const btn22 = document.getElementById('btn22');
+        btn22.addEventListener('click', function() {
+            tabup_bg.classList.remove('show');
+            tabup.classList.remove('show');
+            alert("cam on ban da dang tai sach len Obooks, sach se tu dong tai len sau khi kiem duyet thanh cong")
+        })
+        btn.addEventListener('click', function() {
+            tabup.classList.add('show');
+            tabup_bg.classList.add('show');
+        })
+        btn2.addEventListener('click', function() {
+            tabup.classList.remove('show');
+            tabup_bg.classList.remove('show');
+        })
+        btnruttien.addEventListener('click', function() {
+            tabup2.classList.add('show');
+            tabup_bg.classList.add('show');
+
+        })
+        btn3.addEventListener('click', function() {
+            tabup2.classList.remove('show');
+            tabup_bg.classList.remove('show');
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".cardslider").slick({
+                dots: false,
+                slidesToShow: 6,
+                slidesToScroll: 4,
+                infinite: false,
+                arrows: false,
+                prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'>&#8672;</i></button>",
+                nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'>&#8674;</i></button>",
+                responsive: [{
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                            infinite: false,
+                            dots: false,
+                        },
+                    }, {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: false,
+                            dots: false,
+                        },
+                    }, {
+                        breakpoint: 1050,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                            arrows: false,
+                            infinite: false,
+                        },
+                    }, {
+                        breakpoint: 577,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false,
+                            infinite: false,
+                        },
+                    },
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ],
+            });
+        });
+    </script>
+    <script src="/views/js/app.js"></script>
+</body>
+
+</html>

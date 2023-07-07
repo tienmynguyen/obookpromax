@@ -1,0 +1,256 @@
+body {
+  background-color: #161616;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.avt {
+  background-image: url(/images/avata/joinwick.jpg);
+  background-size: cover;
+}
+
+.avt {
+}
+
+.avt-area {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  overflow: hidden;
+  transition: scale 5s;
+}
+
+.avt-area:hover .avt {
+  scale: 1.2;
+  opacity: 0.8;
+}
+
+/* new code */
+
+.object-card-images {
+  background-color: antiquewhite;
+  margin: 10px 10px;
+  height: 230px !important;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1000px) {
+}
+
+.cardName,
+.card-text {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.cardName {
+  font-size: 90%;
+}
+
+.card-text {
+  font-size: 50%;
+}
+
+.img-avatar {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#btn1:hover {
+  background-color: white;
+}
+
+#btn1:hover #text1 {
+  color: black !important;
+  text-align: center !important;
+}
+
+#btnruttien:hover {
+  background-color: white;
+}
+
+#btnruttien:hover #text1 {
+  color: black !important;
+  text-align: center !important;
+}
+
+.cardslider {
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .cardslider {
+    padding: 1rem 2rem !important;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50.16%);
+  z-index: 5;
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  height: 50px;
+  opacity: 1;
+}
+
+.slick-arrow:hover {
+  background-color: lightcyan;
+  opacity: 0.7;
+}
+
+.slick-prev {
+  left: 9rem;
+}
+
+.slick-next {
+  right: 8.8rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .slick-track:hover .object-card-images:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.card:hover {
+  background-color: rgb(242, 207, 161);
+}
+
+.tabup {
+  position: fixed;
+  width: 66vw;
+  background-color: #333434;
+  z-index: 999;
+  top: 5vh;
+  left: 20vw;
+  right: 16vw;
+  border-radius: 5px;
+  transform: translateX(-30px);
+  display: none;
+  color: white;
+}
+
+#tabup2 {
+  display: none;
+  background: red;
+}
+
+#tabup_bg {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.hiden {
+  display: none !important;
+}
+
+/* chart */
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  background-color: #161616;
+}
+
+.amcharts-graph-g2 .amcharts-graph-stroke {
+  stroke-dasharray: 3px 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: am-moving-dashes 1s linear infinite;
+  animation: am-moving-dashes 1s linear infinite;
+}
+
+@-webkit-keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+
+@keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+
+.lastBullet {
+  -webkit-animation: am-pulsating 1s ease-out infinite;
+  animation: am-pulsating 1s ease-out infinite;
+}
+
+@-webkit-keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+
+@keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+
+.amcharts-graph-column-front {
+  -webkit-transition: all 0.3s 0.3s ease-out;
+  transition: all 0.3s 0.3s ease-out;
+}
+
+.amcharts-graph-column-front:hover {
+  fill: #496375;
+  stroke: #496375;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.amcharts-graph-g3 {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 500%;
+  stroke-dasharray: 0 \0;
+  stroke-dashoffset: 0 \0;
+  -webkit-animation: am-draw 40s;
+  animation: am-draw 40s;
+}
+
+@-webkit-keyframes am-draw {
+  0% {
+    stroke-dashoffset: 500%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes am-draw {
+  0% {
+    stroke-dashoffset: 500%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+/* chart */

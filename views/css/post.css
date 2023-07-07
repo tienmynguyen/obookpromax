@@ -1,0 +1,329 @@
+.sizenho {
+  display: flex;
+  align-items: end;
+  height: 250px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.text-post {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.text-post span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sizelon {
+  height: 515px;
+  border-radius: 10px;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+.sizelon2 {
+  height: 515px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.wrap {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  -webkit-perspective: 2500px;
+  perspective: 2500px;
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+
+.wrap .girl {
+  background: url("/images/nguyennhatanh/nguyennhatanh.png") no-repeat;
+  margin-left: 0;
+  width: 450px;
+  height: 600px;
+  bottom: 0%;
+  top: 10%;
+  position: absolute;
+}
+
+.wrap h1 {
+  left: 22%;
+  transform: rotate(-49deg);
+  color: #333;
+  font-size: 4em;
+  font-family: Raleway, sans-serif;
+  top: 25%;
+  position: absolute;
+}
+
+.wrap h1 span {
+  color: black;
+  font-weight: 1000;
+}
+
+.wrap .list {
+  width: 80%;
+  height: 110vh;
+  overflow-x: hidden;
+  webkit-transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  margin: 0 0 0 200px;
+  padding: 150px 100px 500px 0;
+  scrollbar-width: none;
+}
+
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+
+.wrap .list::-webkit-scrollbar {
+  display: block;
+}
+
+.wrap .list .item {
+  width: 30%;
+  height: 400px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.wrap .list .item::after {
+  content: "";
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3960c8e1-d90e-4e60-8522-816b41b93892/d84vq6v-5985a860-c6c3-453c-a0ae-e80e5e5abf06.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM5NjBjOGUxLWQ5MGUtNGU2MC04NTIyLTgxNmI0MWI5Mzg5MlwvZDg0dnE2di01OTg1YTg2MC1jNmMzLTQ1M2MtYTBhZS1lODBlNWU1YWJmMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.G2ljZtN3fPs4NhvF-fCGxl_97BA4w8kvt_qGyJH1RNI");
+  opacity: 0.1;
+}
+
+.wrap .list .item .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 1px 1px 50px 0 #000;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  z-index: 10;
+  position: relative;
+}
+
+.list__1 button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 9999;
+  top: -300px;
+  position: relative;
+  display: inline;
+  margin-left: -60px;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media only screen and (max-width: 768px) {
+  .girl {
+    background: url() no-repeat cover fixed;
+  }
+  h1 {
+    display: none;
+  }
+}
+
+.btn_left:hover {
+  background: white;
+  color: black;
+}
+.btn_left:hover .text1 {
+  color: black;
+}
+
+.btn_left .text1 {
+  color: white;
+}
+
+.tabup {
+  position: fixed;
+  width: 66vw;
+  background-color: #333434;
+  z-index: 999;
+  top: 8vh;
+  left: 20vw;
+  right: 16vw;
+  border-radius: 5px;
+  transform: translateX(-30px);
+  display: none;
+  color: white;
+}
+
+#tabup_bg {
+  display: none;
+}
+
+.comment-box {
+  overflow: hidden;
+}
+
+.comment-box .user {
+  display: flex;
+}
+
+.comment-box .user .image img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+}
+
+.comment-box textarea {
+  background: #f4f4f4;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 6rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  resize: inherit;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px;
+}
+
+.comment-box textarea:focus-visible {
+  box-shadow: 0 0 0 1px gray;
+  outline: none;
+}
+
+.Tabup__item {
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.avtmem {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #212121;
+  background-image: url("/views/images/avata/bocau.png");
+  background-size: cover;
+}
+
+.post-card-k1 {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 2rem;
+  height: 15rem;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.post-card-k2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: antiquewhite;
+  backdrop-filter: blur(1rem);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.3s);
+  transition: 0.5s ease-in-out;
+}
+
+.post-card-k .post-card-k1:hover .post-card-k2 {
+  height: 7rem;
+  width: 7rem;
+  left: -2rem;
+  top: calc(30% - 3.5rem);
+  border: solid 1px black;
+}
+
+.post-card-k .post-card-k1:hover .post-card-k2 img {
+  max-width: 100%;
+}
+
+.post-card-k2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.post-card-k .post-card-k1 .post-card-k3 {
+  background-color: antiquewhite;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 4rem);
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  top: 20%;
+  padding-left: 1.2rem;
+  text-align: justify;
+  padding-right: 2rem;
+}
+
+.post-card-k .post-card-k1 .post-card-k3 .k3-tittle {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  padding-left: 0.2rem;
+}
+
+.post-card-k .post-card-k1 .post-card-k3 .k3-p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-card-k .post-card-k1 .post-card-k3 .k3-button {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.5rem;
+  display: inline-block;
+  margin-top: 1.3rem;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  background: none;
+  border: solid 1px black;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.post-card-k .post-card-k1 .post-card-k3 .k3-button:hover {
+  background: black;
+  color: antiquewhite;
+}

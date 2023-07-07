@@ -1,0 +1,310 @@
+.baner1:hover {
+  opacity: 80%;
+}
+
+.icon1 {
+  border-radius: 5px;
+}
+
+.icon1:hover {
+  background-color: rgb(237, 214, 185);
+}
+
+#result {
+  width: 90%;
+  height: 80%;
+  background-color: rgb(255, 145, 0);
+  border: none;
+  text-align: left;
+  margin-top: 3%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .cmt {
+    font-size: 10px !important;
+  }
+}
+
+.bdtop {
+  border-radius: 5px;
+  border: 1px dashed;
+}
+
+@media screen and (max-width: 1000px) {
+  .bdtop {
+    border: none;
+  }
+}
+
+.btcolor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 79.8vw;
+}
+
+/* comment */
+
+.commentbook {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: system-ui;
+  align-items: normal;
+  text-align: left;
+  /* box-shadow: 0 0 100px rgb(240, 240, 148); */
+}
+
+.comment-box,
+.post-comment .list {
+  background-color: rgb(245, 225, 200);
+  border-radius: 6px;
+  box-shadow: 0 2px 2px #0002;
+}
+
+.comment-session {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.post-comment .list {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post-comment .list .user {
+  display: flex;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.post-comment .list .user img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+}
+
+.comment-session .name {
+  font-weight: 500;
+}
+
+.post-comment .list .day {
+  font-size: 12px;
+}
+
+.post-comment .comment-post {
+  padding: 0 0 15px 58px;
+}
+
+.comment-box {
+  overflow: hidden;
+}
+
+.comment-box .user {
+  display: flex;
+}
+
+.comment-box .user .image img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+}
+
+.comment-box textarea {
+  background: #f4f4f4;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 10px;
+  resize: inherit;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px;
+}
+
+.comment-box textarea:focus-visible {
+  box-shadow: 0 0 0 1px gray;
+  outline: none;
+}
+
+.comment-box .comment-submit {
+  float: right;
+  padding: 6px 10px;
+  border: none;
+  background: #009cff;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.comment-box .comment-submit:hover {
+  background: #0a4d77;
+}
+
+@media screen and(max-width:660px) {
+  .comment-session {
+    width: 100%;
+  }
+}
+
+/* type new */
+
+.txta {
+  color: black;
+  text-decoration: none;
+}
+
+.rowum .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.cardonbook {
+  text-align: left !important;
+}
+
+.object-card-images {
+  background-color: rgb(245, 225, 200);
+  margin: 10px 10px;
+  height: 250px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1000px) {
+}
+
+.cardName,
+.card-text {
+  margin-left: 5%;
+}
+
+.cardName {
+  font-size: 90%;
+}
+
+.card-text {
+  font-size: 60%;
+}
+
+.img-avatar {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1000px) {
+  .cardslider {
+    padding: 3rem !important;
+  }
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.card-link {
+  margin-top: 30px;
+  margin-bottom: -30px;
+  font-display: unset;
+}
+
+.hrline {
+  width: 90%;
+}
+
+#card-link-title {
+  color: black;
+  margin: 3rem;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) {
+  #card-link-title {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+  }
+  .slick-track:hover .object-card-images:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+.btn {
+  display: block;
+  user-select: all;
+}
+
+/* end */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(91, 87, 87);
+  border-radius: 5px;
+}
+
+/* star */
+.star-rate {
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  display: none;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+.object-card-images {
+  background-color: antiquewhite;
+  margin: 10px 10px;
+  height: 275px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1000px) {
+}
+
+.cardName,
+.card-text {
+  margin-left: 5%;
+}
+
+.cardName {
+  font-size: 120%;
+}
+
+.card-text {
+  font-size: 70%;
+}
+
+.img-avatar {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1000px) {
+  /* .cardslider {
+    padding: 4rem 2rem !important;
+  } */
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50.16%);
+  z-index: 5;
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  width: 7%;
+  height: 71%;
+  opacity: 0;
+}
+
+.slickarrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50.16%);
+  z-index: 5;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 20px;
+  font-weight: 700;
+  background: #1c1e1e;
+  color: white;
+}
+
+.slick-arrow:hover {
+  background-color: lightcyan;
+  opacity: 0.7;
+}
+
+.slick-prev {
+  left: 3rem;
+}
+
+.slick-next {
+  right: 2.8rem;
+}
+
+.card-link {
+  margin-top: 30px;
+  margin-bottom: -30px;
+  font-display: unset;
+}
+
+.hrline {
+  width: 90%;
+}
+
+#card-link-title {
+  margin-left: 3rem;
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 700;
+}
+
+#card-link-title:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+@media screen and (min-width: 1000px) {
+  #card-link-title {
+    margin-left: 3rem;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+  }
+}
+
+.teamkindof {
+  color: white;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  margin: 10px 20px;
+}
+
+.teamkindof:hover {
+  scale: 1.2;
+}
+
+.teamkindof img {
+  width: 25%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .teamkindof img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.teamkindof h5 {
+  padding: 5px 0px;
+  font-size: medium;
+  color: black;
+}
+
+.teamkindof p {
+  padding-bottom: 5px;
+  font-size: xx-small;
+  color: black;
+}
+
+.banner {
+  height: 7rem;
+}
+
+.banner .img-fluid {
+  height: 5rem !important;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .banner .img-fluid {
+    height: 5rem !important;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .banner {
+  }
+  .cardslider4book {
+  }
+  #card-link-title {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+  }
+  .slick-track:hover .object-card-images:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.card:hover {
+  background-color: rgb(242, 207, 161);
+}
+
+.topic .cardslider-kindof .teamkindof h5,
+.topic .cardslider-kindof .teamkindof p {
+  color: white;
+}
