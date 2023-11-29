@@ -4,6 +4,7 @@
   margin: 10px 10px;
   height: 275px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {

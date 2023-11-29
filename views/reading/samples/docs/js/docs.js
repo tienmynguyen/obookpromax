@@ -31,7 +31,7 @@ function updateTabs() {
       7: "chương 1-8",
       34: "chương 9-10",
       48: "chương 11-12",
-      61: "chương 11-12",
+      61: "chương 13-14",
     },
     left = [],
     right = [],
@@ -110,3 +110,4 @@ function setPreview(view) {
     backgroundPosition: "0px -" + (view - 1) * previewHeight + "px",
   });
 }
+// -------------------------------------------------------------

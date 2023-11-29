@@ -1,6 +1,7 @@
 <?php
 
-class Router {
+class Router
+{
 
 
     /**
@@ -8,14 +9,16 @@ class Router {
      */
     private $handled = false;
 
-    function __construct() {}
+    function __construct()
+    {
+    }
 
     /**
-    * handle get routes/requests
-    * 
-    * @var $route string the route to handle.
-    * @var $view string the view to render.
-    */
+     * handle get routes/requests
+     * 
+     * @var $route string the route to handle.
+     * @var $view string the view to render.
+     */
     public function get($route, $view)
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
@@ -25,7 +28,7 @@ class Router {
         $uri = $_SERVER['REQUEST_URI'];
         if ($uri === $route) {
             $this->handled = true;
-            return include_once (views . $view);
+            return include_once(views . $view);
         }
     }
 
@@ -44,7 +47,7 @@ class Router {
         $uri = $_SERVER['REQUEST_URI'];
         if ($uri === $route) {
             $this->handled = true;
-            return include_once (views . $view);
+            return include_once(views . $view);
         }
     }
 
@@ -52,11 +55,5 @@ class Router {
     /**
      * handle non-existing routes.
      */
-    function __destruct() 
-    {
-        if (!$this->handled) {
-            return include_once(views . '404.html');
-        }
-    }
-
+    
 }

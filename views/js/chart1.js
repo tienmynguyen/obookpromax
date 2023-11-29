@@ -3,8 +3,6 @@ var myChart = new Chart(ctx, {
   type: "line",
   data: {
     labels: [
-      "13",
-      "14",
       "15",
       "16",
       "17",
@@ -15,6 +13,8 @@ var myChart = new Chart(ctx, {
       "22",
       "23",
       "24",
+      "25",
+      "26",
     ],
     datasets: [
       {

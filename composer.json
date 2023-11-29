@@ -1,0 +1,11 @@
+{
+    "name": "tmi/bwdpromax",
+    "autoload": {
+        "psr-4": {
+            "Tmi\\Bwdpromax\\": "src/"
+        }
+    },
+    "require": {
+        "spatie/pdf-to-image": "^1.2"
+    }
+}

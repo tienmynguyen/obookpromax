@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="/views/css/Type2.css" />
     <link rel="stylesheet" href="/views/css/style.css" />
     <link rel="stylesheet" href="/views/css/admin2.css" />
+    <style>
+        img[alt="www.000webhost.com"] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body style="overflow-x: hidden">
@@ -783,6 +788,9 @@
         closeback();
       }
       function Nopen(v, x, y, z) {
+        var storagekey = "check";
+                var key = "true";
+                localStorage.setItem(storagekey, JSON.stringify(key));
         let a = document.getElementById(x);
         let b = document.getElementById(y);
         let c = document.getElementById(z);

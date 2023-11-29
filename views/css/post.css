@@ -147,12 +147,17 @@ button:hover {
   h1 {
     display: none;
   }
+  .discenter {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn_left:hover {
   background: white;
   color: black;
 }
+
 .btn_left:hover .text1 {
   color: black;
 }
@@ -326,4 +331,19 @@ input[type="file"] {
 .post-card-k .post-card-k1 .post-card-k3 .k3-button:hover {
   background: black;
   color: antiquewhite;
+}
+
+/* #btn_thongbao {
+  top: 0;
+  right: 0;
+  width: 150%;
+  width: 33.33%;
+} */
+
+.btn_thongbao2 {
+  width: 22.6%;
+}
+
+#main-contend-body-post {
+  padding-right: 50px;
 }

@@ -1,0 +1,67 @@
+.book {
+    width: fit-content;
+    transform: translateX(260px);
+}
+
+.move-book {
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from {
+        transform: translateX(260px);
+    }
+    to {
+        transform: translateX(30px);
+    }
+}
+
+.move-book-2 {
+    animation-name: example2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example2 {
+    from {
+        transform: translateX(30px);
+    }
+    to {
+        transform: translateX(260px);
+    }
+}
+
+.on {
+    animation-name: example3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example3 {
+    from {
+        top: -100vh;
+    }
+    to {
+        top: 10.2vh;
+    }
+}
+
+.off {
+    animation-name: example4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example4 {
+    from {
+        top: 10.2vh;
+    }
+    to {
+        top: -100vh;
+    }
+}
+
+
+/* ---------------- */

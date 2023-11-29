@@ -19,13 +19,13 @@ $router = new Router();
 /**
  * handle / route
  */
-$router->get('/', 'index.html');
+$router->get('/', 'index.php');
 
 
 /**
  * handle /home route
  */
-$router->get('/trangchu', 'start.html');
+$router->get('/trangchu', 'start.php');
 
 /**
  * handle /home route
@@ -35,13 +35,13 @@ $router->get('/home', 'start2.html');
 /**
  * handle /about route
  */
-$router->get('/lib', 'lib.html');
+$router->get('/lib', 'lib.php');
 
 
 /**
  * handle /contact route
  */
-$router->get('/profile', 'profile.html');
+$router->get('/profile', 'profile.php');
 
 /**
  * handle /contact route
@@ -51,7 +51,7 @@ $router->get('/trangcanhan', 'profile2.html');
 /**
  * handle /contact route
  */
-$router->get('/post', 'post.html');
+$router->get('/post', 'post.php');
 
 
 /**
@@ -68,7 +68,7 @@ $router->get('/kiemduyet', 'admin2.html');
 /**
  * handle /contact route
  */
-$router->get('/nhagiakim', 'book.html');
+$router->get('/book', 'book.php');
 
 /**
  * handle /contact route
@@ -78,4 +78,6 @@ $router->get('/hoangtube', 'book2.html');
 /**
  * handle /contact route
  */
-$router->get('/test', 'book3.html');
+$router->get('/admin', '/Admin/index.php');
+$router->get('/index.php', 'index.php');
+$router->get('/logout', 'logout.php');
