@@ -28,6 +28,12 @@
                <input type="Email" class="form-control" id="" placeholder="" name="Email" value="<?= $data['email']?>">
            </div>
            <div class="form-group">
+            <label for="">Ảnh đại diện</label>
+            <img src="<?=$data['avt']?>" height="200px" width="200px">
+            <input type="file" class="form-control" id="" placeholder="" name="avt" value="<?=$data['avt']?>">
+        </div>
+           <div class="form-group">
+
            <div class="form-group">
                <label for="">Mã quyền</label>
                <select id="" name="MaQuyen" class="form-control">

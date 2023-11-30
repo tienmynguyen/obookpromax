@@ -49,6 +49,7 @@ while($row = mysqli_fetch_assoc($result)){
         setcookie("pass", $pass , time()+60);
         $_SESSION['email'] = $name;
         $_SESSION['pass'] = $pass;
+        $_SESSION['avt'] = $row['avt'];
         $_SESSION['name'] = $row['user'];
         $_SESSION['id'] = $row['ID'];
         $_SESSION['is_login'] = true;

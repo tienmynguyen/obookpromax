@@ -59,6 +59,15 @@ class NguoiDungController
     }
     public function update()
     {
+         $target_dir = "../views/images/";  // thư mục chứa file upload
+
+        $HinhAnh1 = "";
+        $target_file = $target_dir . basename($_FILES["avt"]["name"]); // link sẽ upload file lên
+        $status_upload = move_uploaded_file($_FILES["avt"]["tmp_name"], $target_file);
+        var_dump(basename($_FILES["avt"]["name"]));
+        if ($status_upload) { // nếu upload file không có lỗi 
+            $HinhAnh1 = "/views/images/".basename($_FILES["avt"]["name"]);
+        }
         $data = array(
             "ID" => $_POST['MaND'],
             'name'  =>   $_POST['Ten'],
@@ -66,6 +75,7 @@ class NguoiDungController
             'email' =>    $_POST['Email'],
             'user' => $_POST['TaiKhoan'],
             'pass' => ($_POST['MatKhau']),
+            'avt' => $HinhAnh1,
             'role' =>  $_POST['MaQuyen'],
             
         );
