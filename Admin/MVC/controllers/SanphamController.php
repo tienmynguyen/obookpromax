@@ -28,16 +28,28 @@ class SanphamController
     }
     public function store()
     {
+         $maxid = $this->sanpham_model->getmaxid();
+        $max = $maxid['max(id)'] + 1;
         $target_dir = "../views/images/baikiemtragiuaki/";  // thư mục chứa file upload
-
+        $target_dir2 = "../views/reading/samples/docs/sach/";
         $HinhAnh1 = "";
-        $target_file = $target_dir . basename($_FILES["HinhAnh1"]["name"]); // link sẽ upload file lên
-
-        $status_upload = move_uploaded_file($_FILES["HinhAnh1"]["tmp_name"], $target_file);
-
+  
+         //luu file pdf
+         //luu file anh bia`
+        $target_file = $target_dir . basename($_FILES["HinhAnh1"]["name"]); 
+        
+        
+          $status_upload = move_uploaded_file($_FILES["HinhAnh1"]["tmp_name"], $target_file);
+          $target_file2 = $target_dir2 . $max .".pdf";
+       
+        $status_upload = move_uploaded_file($_FILES["file"]["tmp_name"], $target_file2);
+       
         if ($status_upload) { // nếu upload file không có lỗi 
             $HinhAnh1 = "baikiemtragiuaki/".basename($_FILES["HinhAnh1"]["name"]);
         }
+
+
+
         $theloai = "";
         if (isset($_POST['phieuluu'])) {
             $theloai = $theloai .' '.$_POST['phieuluu'];
@@ -60,8 +72,7 @@ class SanphamController
         if (isset($_POST['nghethuat'])) {
             $theloai = $theloai .' '.$_POST['nghethuat'];
         }
-        $maxid = $this->sanpham_model->getmaxid();
-        $max = $maxid['max(id)'] + 1;
+       
         $data = array(
             'id' => $max,
             'name'  =>   $_POST['TenSP'],
@@ -94,16 +105,22 @@ class SanphamController
     }
     public function update()
     {
-
-         $target_dir = "../views/images/baikiemtragiuaki/";  // thư mục chứa file upload
-
         $HinhAnh1 = "";
+         $target_dir = "../views/images/baikiemtragiuaki/";  // thư mục chứa file upload
+         $target_dir2 = "../views/reading/samples/docs/sach/";
+        
         $target_file = $target_dir . basename($_FILES["HinhAnh1"]["name"]); // link sẽ upload file lên
         $status_upload = move_uploaded_file($_FILES["HinhAnh1"]["tmp_name"], $target_file);
         var_dump(basename($_FILES["HinhAnh1"]["name"]));
         if ($status_upload) { // nếu upload file không có lỗi 
             $HinhAnh1 = "baikiemtragiuaki/".basename($_FILES["HinhAnh1"]["name"]);
         }
+        
+        $target_file2 = $target_dir2 .$_POST['MaSP'] .".pdf";
+        
+        $status_upload = move_uploaded_file($_FILES["file"]["tmp_name"], $target_file2);
+      
+        
          $theloai = "";
         if (isset($_POST['phieuluu'])) {
             $theloai = $theloai .' '.$_POST['phieuluu'];
@@ -126,17 +143,27 @@ class SanphamController
         if (isset($_POST['nghethuat'])) {
             $theloai = $theloai .' '.$_POST['nghethuat'];
         }
-        $maxid = $this->sanpham_model->getmaxid();
-        $max = $maxid['max(id)'] + 1;
-        $data = array(
-            'id' => $max,
+        if($HinhAnh1 != ""){
+            $data = array(
+            'id' => $_POST['MaSP'],
             'name'  =>   $_POST['TenSP'],
             'note'  =>   $_POST['Butdanh'],
             'img' => $HinhAnh1,
             'dodai' =>  $_POST['Dodai'],
             'theloai'=> $theloai,
             'gioithieu' =>  $_POST['MoTa'],
-        );
+            );
+        }
+        else{
+            $data = array(
+                'id' => $_POST['MaSP'],
+                'name' => $_POST['TenSP'],
+                'note' => $_POST['Butdanh'],
+                'dodai' => $_POST['Dodai'],
+                'theloai' => $theloai,
+                'gioithieu' => $_POST['MoTa'],
+            );
+        }
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
                 $value = str_replace("'", "\'", $value);

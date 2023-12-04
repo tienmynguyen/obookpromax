@@ -58,26 +58,9 @@ $router->get('/post', 'post.php');
  * handle /contact route
  */
 $router->get('/thongke', 'admin.html');
-
-/**
- * handle /contact route
- */
 $router->get('/kiemduyet', 'admin2.html');
-
-
-/**
- * handle /contact route
- */
 $router->get('/book', 'book.php');
-
-/**
- * handle /contact route
- */
 $router->get('/hoangtube', 'book2.html');
-
-/**
- * handle /contact route
- */
 $router->get('/admin', '/Admin/index.php');
 $router->get('/index.php', 'index.php');
 $router->get('/logout', 'logout.php');

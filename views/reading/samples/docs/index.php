@@ -6,6 +6,9 @@ $conn = db_connect();
 
 
 setluotdoc($conn, $_SESSION["bookid"]);
+echo '<script>';
+echo 'var bookid = "' . $_SESSION['bookid'] . '";';
+echo '</script>';
 if(isset($_SESSION["id"])){
   setlichsudoc($conn, $_SESSION["bookid"], $_SESSION["id"]);
 }
@@ -36,6 +39,8 @@ if(isset($_SESSION["id"])){
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+ 
     <script
       type="text/javascript"
       src="../../extras/jquery.min.1.7.js"

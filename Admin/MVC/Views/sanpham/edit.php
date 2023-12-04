@@ -6,7 +6,7 @@
 <hr>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <form action="?mod=sanpham&act=update" method="POST" role="form" enctype="multipart/form-data">
-        <input type="hidden" name="MaSP" value="<?= $data['name'] ?>">
+        <input type="hidden" name="MaSP" value="<?= $data['id'] ?>">
         <div class="form-group">
             <label for="">Tên sách</label>
             <input type="text" class="form-control" id="" placeholder="" name="TenSP" value="<?=$data['name']?>">
@@ -42,7 +42,7 @@
         </div>
         <div class="form-group">
       <label for="">file sách</label>
-      <input type="file" class="form-control" id="" placeholder="" name="HinhAnh3">
+      <input type="file" class="form-control" id="" placeholder="" name="file">
     </div>
        <div class="form-group">
       <label for="">Độ dài</label>

@@ -38,7 +38,7 @@
     </div>
     <div class="form-group">
       <label for="">file sách</label>
-      <input type="file" class="form-control" id="" placeholder="" name="HinhAnh3">
+      <input type="file" class="form-control" id="" placeholder="" name="file">
     </div>
     <div class="form-group">
       <label for="">Độ dài</label>
