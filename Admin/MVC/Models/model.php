@@ -79,7 +79,7 @@ class Model
             header('Location: ?mod=' . $this->table . '&act=edit&id=' . $data['id']['id']);
         }
     }
-     function duyet($query,$id)
+     function duyet($query,$id,$userid,$bookid)
     {
         // echo "<script>console.log('Debug Objects: " . $query . "' );</script>";
         $status = $this->conn->query($query);
@@ -91,7 +91,7 @@ class Model
         echo "<script>console.log('Debug Objects: " .$query. "' );</script>";
 
         $this->conn->query("DELETE from sachcho where id=$id");
-
+        $this->conn->query("insert into mybooks (bookid,userid) values ('" . $bookid . "','" . $userid . "')");
           header('Location: ?mod=' . $this->table);
     }
     function getmaxid(){
@@ -111,5 +111,9 @@ class Model
     function hd(){
 
          header('Location: ?mod=booktype&id=1');
+    }
+    function runsql($sql){
+         $status = $this->conn->query($sql);
+         
     }
 }

@@ -7,7 +7,7 @@ src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 const pdfUrl = "../docs/sach/" + bookid + ".pdf";
 
 function loadPage(page) {
-    getImageDataURL(page)
+    getImageDataURL(page - 2)
         .then(function(imgData) {
             var img = $("<img />");
             img.load(function() {

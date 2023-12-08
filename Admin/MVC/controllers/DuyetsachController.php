@@ -77,12 +77,10 @@ class DuyetsachController
                 echo 'File đã được di chuyển hoặc đổi tên thành công!';
             } 
 
-     
-        $query = "INSERT INTO thuvien (id,name, note, img, dodai, theloai, gioithieu) VALUES ('".$max."','".$data2['name']."', '".$data2['note']."','".$data2['img']."','".$data2['dodai']."','".$data2['theloai']."','".$data2['gioithieu']."');";
-     
-        $id = $_GET['id'];
         
-        $this->duyetsach_model->duyet($query,$id);
+        $query = "INSERT INTO thuvien (id,name, note, img, dodai, theloai, gioithieu) VALUES ('".$max."','".$data2['name']."', '".$data2['note']."','".$data2['img']."','".$data2['dodai']."','".$data2['theloai']."','".$data2['gioithieu']."');";
+        $id = $_GET['id'];
+        $this->duyetsach_model->duyet($query,$id,$data2['userid'],$max);
         
     }
     function delete()
