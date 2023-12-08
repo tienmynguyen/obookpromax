@@ -121,7 +121,7 @@ function getbyid($conn,$id) {
 }
 
 function sentcmt($conn,$bookid,$userid,$cmt) {
-     
+$cmt= str_replace(array('"', "'"), '', $cmt);
     $query = "insert into cmt (bookid,userid,cmt,date) values ('".$bookid."','".$userid."','".$cmt."',NOW())";
     $result = mysqli_query($conn, $query);
     if (!$result) {
@@ -252,7 +252,15 @@ function getlichsudoc($conn,$userid){
     return $result;
 }
 
-
+function sachcho($conn,$id,$ten,$tacgia,$dodai,$mota,$theloai,$trangbia,$filesach){
+     $query = "INSERT INTO sachcho (userid,name, note, img, dodai, theloai, gioithieu, file) VALUES ('$id','$ten', '$tacgia', '$trangbia','$dodai','$theloai','$mota','$filesach');";
+     $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+ return $result;
+    }
 
 // function getOrderId($conn, $customerid) {
 //     $query = "SELECT orderid FROM orders WHERE customerid = '$customerid'";

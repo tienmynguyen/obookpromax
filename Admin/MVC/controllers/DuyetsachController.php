@@ -33,12 +33,55 @@ class DuyetsachController
         // $this->duyetsach_model->update($data);
        
         
-        $data2 = $this->duyetsach_model->find($_GET['id']);
-        $maxid = $this->duyetsach_model->getmaxid() ;
+           $maxid = $this->duyetsach_model->getmaxid() ;
         $max = $maxid['max(id)'] + 1;
-        $query = "INSERT INTO thuvien (id,name, note, img, dodai, theloai, gioithieu) VALUES ('".$max."','".$data2['name']."', '".$data2['note']."','".$data2['img']."','".$data2['dodai']."','".$data2['theloai']."','".$data2['gioithieu']."');";
+        
+        $data2 = $this->duyetsach_model->find($_GET['id']);
 
+            $old_location = "../views/images/chuakiemduyet/".$data2['img'];
+            $new_location = "../views/images/trangbia/".$data2['img'];
+            $fn = "";
+
+            
+            if (file_exists($new_location)) {
+                $path_parts = pathinfo($new_location);
+                $extension = isset($path_parts['extension']) ? '.' . $path_parts['extension'] : '';
+                $filename = $path_parts['filename'];
+                 $data2['img'] = "trangbia/" . $filename;
+                $counter = 1;
+                while (file_exists($new_location)) {
+                    $new_location = "../views/images/trangbia/" . $filename . '_' . $counter . $extension;
+                    $fn = $filename.'_'.$counter . $extension;
+                    $counter++;
+                    
+                }
+            }
+
+            if (copy($old_location, $new_location)) {
+                echo 'File đã được di chuyển hoặc đổi tên thành công!'.$fn;
+                $data2['img'] = "trangbia/".$fn;
+            } 
+            //file sach 
+             $old_location = "../views/images/chuakiemduyet/".$data2['file'];
+            $new_location = "../views/reading/samples/docs/sach/".$max.'.pdf';
+            $fn = "";
+
+            
+            if (file_exists($new_location)) {
+                $path_parts = pathinfo($new_location);
+                $extension = isset($path_parts['extension']) ? '.' . $path_parts['extension'] : '';
+                $filename = $path_parts['filename'];
+            }
+
+            if (copy($old_location, $new_location)) {
+                echo 'File đã được di chuyển hoặc đổi tên thành công!';
+            } 
+
+     
+        $query = "INSERT INTO thuvien (id,name, note, img, dodai, theloai, gioithieu) VALUES ('".$max."','".$data2['name']."', '".$data2['note']."','".$data2['img']."','".$data2['dodai']."','".$data2['theloai']."','".$data2['gioithieu']."');";
+     
         $id = $_GET['id'];
+        
         $this->duyetsach_model->duyet($query,$id);
         
     }

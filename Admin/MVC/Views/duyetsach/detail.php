@@ -12,12 +12,12 @@
     <thead>
         <tr>
       <th scope="col">Tên</th>
-      <th scope="col">Tac gia</th>
-      <th scope="col">Image</th>
-      <th scope="col">Do dai</th>
-      <th scope="col">The loai</th>
-      <th scope="col">Gioi thieu</th>
-      <th scope="col">Noi dung</th>
+      <th scope="col">Tác giả</th>
+      <th scope="col">Trang bìa</th>
+      <th scope="col">Độ dài</th>
+      <th scope="col">Thể loại</th>
+      <th scope="col">Giới thiệu</th>
+      <th scope="col">File sách</th>
       <th scope="col">Trạng thái</th>
       
     </tr>
@@ -27,12 +27,14 @@
             <tr>
         <td><?= $row['name'] ?></td>
         <td><?= $row['note'] ?></td>
-        <td><?= $row['img']?></td>
+        <td><img style="max-width: 150px;" src="/views/images/chuakiemduyet/<?= $row['img']?>" alt=""></td>
+        
         
         <td><?= $row['dodai'] ?></td>
         <td><?= $row['theloai'] ?></td>
         <td><?= $row['gioithieu'] ?></td>
-        <td><?= $row['gioithieu'] ?></td>
+        <td><a href="/views/images/chuakiemduyet/<?= $row['file']?>"><?= $row['file']?></a></td>
+        
         <td><?php if($row['TrangThai']==0){
             echo 'Chưa xét duyệt';
         }else{

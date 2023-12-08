@@ -62,7 +62,7 @@ ob_start();
 
                         <div class="bt2 pt-2">
 
-                            <a href="/pdf/nhagiakim.pdf"><button type="button" class="btn btn-outline-primary" style="width: 190px">
+                            <a href="/views/reading/samples/docs/sach/<?php echo $id.".pdf"?>"><button type="button" class="btn btn-outline-primary" style="width: 190px">
                     Tải xuống
                   </button></a>
                         </div>
@@ -264,7 +264,7 @@ ob_start();
                                             <div class="list pcomment">
                                                 <div class="user">
                                                     <div class="user-image">
-                                                        <img src="/views/images/profile.png" alt="" />
+                                                        <img src="<?php echo $user['avt']?>" alt="" />
                                                     </div>
                                                     <div class="user-meta">
                                                         <div class="name"><?php echo $user['user']?></div>
@@ -294,7 +294,7 @@ ob_start();
                                             <div class="comment-box p-2" id="bcomment">
                                             <div class="user">
                                                 <div class="image">
-                                                    <img src="/views/images/profile.png" alt="" />
+                                                    <img src="<?php echo $_SESSION['avt']?>" alt="" />
                                                 </div>
                                                 <div class="name">Bình luận của bạn</div>
                                             </div>

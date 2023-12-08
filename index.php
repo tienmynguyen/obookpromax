@@ -64,3 +64,5 @@ $router->get('/hoangtube', 'book2.html');
 $router->get('/admin', '/Admin/index.php');
 $router->get('/index.php', 'index.php');
 $router->get('/logout', 'logout.php');
+
+
