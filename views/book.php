@@ -21,6 +21,10 @@ ob_start();
     
     }
     
+    if(isset($_POST['yeuthich'])){
+    setyeuthich($conn, $id, $userid);
+    unset($_POST['yeuthich']);
+    }
 
      ?>
 
@@ -72,7 +76,9 @@ ob_start();
                     Thao tác
                   </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Mục lục</a></li>
+                                    <li><form action="" method="post">
+                                        <input type="submit" class="dropdown-item" value="Yêu thích" name="yeuthich" >
+                                    </form></li>
                                     <li><a class="dropdown-item" href="#">Sách tương tự</a></li>
                                     <li><a class="dropdown-item" href="#">Ẩn sách</a></li>
                                 </ul>

@@ -10,7 +10,7 @@ require("../controller/functions.php");
 if (!isset($_POST['dangnhap'])) {
     
     $_SESSION["errorArray"]["adminError"] = "Cannot Let You Enter Admin Area. Try Entering Data";
-    header("location:http://localhost:3000/views/index.php");
+    header("location:");
     exit;
 }
 
@@ -63,7 +63,7 @@ while($row = mysqli_fetch_assoc($result)){
              $_SESSION['isLogin_Admin'] = false;
         }
         
-        header("location:http://localhost:3000/trangchu");
+        header("location: /trangchu");
         ob_end_flush();
     }
 }

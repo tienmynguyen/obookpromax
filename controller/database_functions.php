@@ -170,7 +170,15 @@ function getmybook($conn,$id){
     }
     return $result;
 }
-
+function getdanhsachyeuthich($conn,$id){
+    $query = "SELECT * FROM thuvien t join danhsachyeuthich b on t.id=b.bookid WHERE b.userid =".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+    return $result;
+}
 
 function get10topbook($conn){
     $query = "select * from thuvien order by luotdoc desc limit 10";
@@ -241,6 +249,31 @@ function setlichsudoc($conn, $bookid, $userid)
     }
    
 }
+
+function setyeuthich($conn, $bookid, $userid)
+{ 
+    $query = "select * from danhsachyeuthich where bookid = '" . $bookid . "' and userid = '" . $userid . "'";
+    $result = mysqli_query($conn, $query);
+    $num = 0;
+    while($row = $result->fetch_assoc()){
+        $num++;
+    }
+    if($num == 0){
+        $query = "insert into danhsachyeuthich (bookid,userid) values ('".$bookid."','".$userid."')";
+   
+    }else{
+         $query = "delete from danhsachyeuthich where userid= '".$userid."' and bookid= '".$bookid."'";
+    
+    }
+    
+   $result = mysqli_query($conn, $query);
+    if (!$result) {
+         echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+   
+}
+
 
 function getlichsudoc($conn,$userid){
     $query = "select * from thuvien t join lichsudoc b on t.id=b.bookid where b.userid = '".$userid."' order by b.date desc";

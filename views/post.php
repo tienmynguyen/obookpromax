@@ -176,7 +176,7 @@ $page = "post";
             <!-- navbar -->
             <?php
 
-            include("../BWDPROMAX/views/access/navbar.php");
+             include $_SERVER['DOCUMENT_ROOT'] . '/views/access/navbar.php';
 
             ?>
             <!-- navbar -->

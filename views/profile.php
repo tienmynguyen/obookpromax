@@ -10,6 +10,7 @@ $page = "profile";
 
     $mybookrs = getmybook($conn,$_SESSION["id"]);
 $lichsudocrs = getlichsudoc($conn, $_SESSION["id"]);
+$sachyeuthichrs = getdanhsachyeuthich($conn, $_SESSION['id']);
     $countmybooks = 0;
 
     
@@ -172,7 +173,44 @@ $lichsudocrs = getlichsudoc($conn, $_SESSION["id"]);
                             </div>
                         </div>
                     </center>
-                   
+                    <h3 class="mt-5 mx-5" style="color: white;
+              ">
+                        Sách yêu thích
+                    </h3>
+                    <center>
+
+                        <div class="col-11 " style="background-color: #3d3f3f; height: auto; border-radius: 10px;">
+                            <div>
+                                <div class="cardslider" style="transform: translateX(0) !important;">
+                                    
+                                <?php while($yeuthich = $sachyeuthichrs->fetch_assoc()){?>
+
+                                    <!-- Card object  -->
+                                    <div class="object-card-images">
+                                        <!-- mot card -->
+                                        <a href="./views/book.php?id=<?php echo $yeuthich['id']?>">
+                                        <div>
+                                            <img src="/views/images/<?php echo $yeuthich["img"] ?>" alt="." class="card-img-top img-avatar" />
+                                        </div>
+                                    </a>
+                                        <div>
+                                            <h3 class="cardName"><?php echo $yeuthich["name"] ?></h3>
+                                            <p>
+                                                <div style="text-decoration: none !important; color:gray;
+                                            font-size: 12px !important;" class="card-text"><?php echo $yeuthich["luotdoc"] ?> lượt đọc </div>
+
+                                            </p>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end object card -->
+                                    <?php }?>
+
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </center>
                     </div>
                     <!-- /center -->
                     <!-- right -->

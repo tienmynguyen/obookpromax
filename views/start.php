@@ -109,7 +109,7 @@ $i=0;
 
         <div class="row">
             <?php
-            include('../BWDPROMAX/views/access/navbar.php');
+           include $_SERVER['DOCUMENT_ROOT'] . '/views/access/navbar.php';
             ?>
             <div class="col-12 col-lg-10">
                 <div class="cardslider_bannner px-5 pt-4">
