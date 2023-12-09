@@ -59,8 +59,8 @@ if(isset($_POST['dangtai'])){
 
 
     sachcho($conn,$_SESSION['id'],$ten,$tacgia,$dodai,$mota,$theloai,$trangbia,$filesach);
-         
-       
+
+    unset($_POST['dangtai']);
        
 
     }
@@ -176,7 +176,7 @@ if(isset($_POST['dangtai'])){
                         </div>
                         <div class="col-6 mt-3">
                             <p>File sách:</p>
-                            <input type="file" name="filesach" id="">
+                            <input type="file" name="filesach" id="" accept=".pdf">
                         </div>
                     </div>
                     <div class="row mt-5">

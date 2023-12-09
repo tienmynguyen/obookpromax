@@ -90,6 +90,17 @@
                     </div>
                     <hr style="width: 80%; color: white;">
                     
-                    <br> <a id="dangxuat" href="logout">Đăng xuất</a>
+                    <br> <a id="dangxuat" href="logout">
+                    
+                   
+                    <?php if(isset($_SESSION['is_login'])){if($_SESSION['is_login']==true){
+                            echo "Đăng xuất";
+                    }else{
+                         echo "Đăng nhập";
+                    }
+                    }else{
+                         echo "Đăng nhập";
+                    } ?>
+                    </a>
                 </center>
             </div>

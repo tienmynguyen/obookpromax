@@ -40,7 +40,7 @@ class DuyetsachController
 
             $old_location = "../views/images/chuakiemduyet/".$data2['img'];
             $new_location = "../views/images/trangbia/".$data2['img'];
-            $fn = "";
+            $fn = "".$data2['img'];
 
             
             if (file_exists($new_location)) {
@@ -48,6 +48,7 @@ class DuyetsachController
                 $extension = isset($path_parts['extension']) ? '.' . $path_parts['extension'] : '';
                 $filename = $path_parts['filename'];
                  $data2['img'] = "trangbia/" . $filename;
+                $fn = $filename;
                 $counter = 1;
                 while (file_exists($new_location)) {
                     $new_location = "../views/images/trangbia/" . $filename . '_' . $counter . $extension;

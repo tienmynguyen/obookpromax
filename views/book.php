@@ -7,7 +7,10 @@ ob_start();
     $sql = "SELECT * FROM `thuvien` where id =".$id;
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    $userid = $_SESSION['id'];
+    if(isset($_SESSION['is_login'])){
+         $userid = $_SESSION['id'];
+    }
+   
     $rscmt = getcmt($conn,$id);
 
 
@@ -76,9 +79,12 @@ ob_start();
                     Thao tác
                   </button>
                                 <ul class="dropdown-menu">
-                                    <li><form action="" method="post">
+                                    <?php if(isset($_SESSION['is_login'])){if($_SESSION['is_login']==true){?>
+                                         <li><form action="" method="post">
                                         <input type="submit" class="dropdown-item" value="Yêu thích" name="yeuthich" >
-                                    </form></li>
+                                    </form></li> 
+                                    
+                                    <?php }}?>
                                     <li><a class="dropdown-item" href="#">Sách tương tự</a></li>
                                     <li><a class="dropdown-item" href="#">Ẩn sách</a></li>
                                 </ul>
@@ -295,7 +301,7 @@ ob_start();
                                         <!-- comment-box -->
                                         <?php 
                                         
-                                        if($_SESSION['is_login']==true){
+                                        if(isset($_SESSION['is_login'])){if($_SESSION['is_login']==true){
                                             ?>
                                             <div class="comment-box p-2" id="bcomment">
                                             <div class="user">
@@ -312,7 +318,7 @@ ob_start();
                                             </form>
                                         </div>
                                       
-                                    <?php }
+                                    <?php }}
                                         
                                         ?>
                                     </div>
