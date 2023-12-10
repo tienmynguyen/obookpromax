@@ -68,7 +68,19 @@ class NguoiDungController
         if ($status_upload) { // nếu upload file không có lỗi 
             $HinhAnh1 = "/views/images/".basename($_FILES["avt"]["name"]);
         }
-        $data = array(
+       if($HinhAnh1 == "" || $HinhAnh1 == NULL){
+         $data = array(
+            "ID" => $_POST['MaND'],
+            'name'  =>   $_POST['Ten'],
+            'age'  =>   $_POST['age'],
+            'email' =>    $_POST['Email'],
+            'user' => $_POST['TaiKhoan'],
+            'pass' => ($_POST['MatKhau']),
+            'role' =>  $_POST['MaQuyen'],
+            
+        );
+       }else{
+         $data = array(
             "ID" => $_POST['MaND'],
             'name'  =>   $_POST['Ten'],
             'age'  =>   $_POST['age'],
@@ -79,6 +91,7 @@ class NguoiDungController
             'role' =>  $_POST['MaQuyen'],
             
         );
+       }
        
         foreach ($data as $key => $value) {
             
