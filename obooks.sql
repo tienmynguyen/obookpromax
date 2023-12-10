@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2023 at 06:39 PM
+-- Generation Time: Dec 10, 2023 at 11:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,7 +33,7 @@ CREATE TABLE `account` (
   `pass` varchar(255) DEFAULT NULL,
   `idprofile` int(11) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `role` tinyint(4) NOT NULL,
+  `role` tinyint(4) NOT NULL DEFAULT 0,
   `name` varchar(50) NOT NULL DEFAULT 'user',
   `age` int(11) NOT NULL DEFAULT 13,
   `money` float NOT NULL DEFAULT 0,
@@ -46,7 +46,7 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`ID`, `user`, `pass`, `idprofile`, `email`, `role`, `name`, `age`, `money`, `avt`) VALUES
 (12, 'my', '123', NULL, 'tienmy@gmail.com', 2, 'user', 13, 0, '/views/images/spiderman.jpg'),
-(13, 'Nguyễn Tiến Mỹ', '1', NULL, 'test@gmail.com', 0, 'user', 18, 0, '/views/images/Screenshot 2023-09-02 212732.png'),
+(13, 'Nguyễn Tiến Mỹ', '1', NULL, 'test@gmail.com', 0, 'user', 18, 0, '/views/images/khongbietten.png'),
 (15, 'gicungduoc', '123', NULL, 'a@gmail.com', 2, 'Khong co ten', 13, 0, '/views/images/khongbietten.png'),
 (16, 'test2', '123123', NULL, 'test2@gmail.com', 0, 'test', 13, 0, '/views/images/profile.png	');
 
@@ -188,7 +188,35 @@ INSERT INTO `cmt` (`id`, `bookid`, `userid`, `cmt`, `date`) VALUES
 (38, 1, 12, 'hello', '2023-11-16 14:38:49'),
 (39, 1, 13, 'hi\r\n', '2023-11-16 14:39:40'),
 (42, 2, 12, 'Sach hay tuyet', '2023-12-08 22:10:40'),
-(43, 82, 12, 'hello', '2023-12-08 23:42:38');
+(43, 82, 12, 'hello', '2023-12-08 23:42:38'),
+(44, 1, 13, 'chào', '2023-12-09 18:37:15'),
+(45, 1, 12, 'chào', '2023-12-09 19:07:23'),
+(46, 1, 12, 'sách hay', '2023-12-09 19:15:34'),
+(47, 83, 12, 'hi', '2023-12-09 19:18:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `danhsachyeuthich`
+--
+
+CREATE TABLE `danhsachyeuthich` (
+  `userid` int(11) NOT NULL,
+  `bookid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `danhsachyeuthich`
+--
+
+INSERT INTO `danhsachyeuthich` (`userid`, `bookid`) VALUES
+(12, 1),
+(12, 2),
+(12, 4),
+(12, 5),
+(12, 82),
+(12, 83),
+(13, 1);
 
 -- --------------------------------------------------------
 
@@ -227,8 +255,8 @@ CREATE TABLE `lichsudoc` (
 --
 
 INSERT INTO `lichsudoc` (`userid`, `bookid`, `date`) VALUES
-(12, 1, '2023-12-08 23:39:51'),
-(12, 2, '2023-12-06 23:26:26'),
+(12, 1, '2023-12-09 19:15:44'),
+(12, 2, '2023-12-09 18:41:26'),
 (12, 3, '2023-12-03 12:12:23'),
 (12, 4, '2023-12-03 12:12:34'),
 (12, 5, '2023-12-03 12:15:56'),
@@ -242,6 +270,7 @@ INSERT INTO `lichsudoc` (`userid`, `bookid`, `date`) VALUES
 (12, 58, '2023-11-28 23:51:16'),
 (12, 81, '2023-12-02 22:30:00'),
 (12, 82, '2023-12-08 23:42:52'),
+(12, 83, '2023-12-09 19:18:25'),
 (13, 1, '2023-11-29 19:30:49'),
 (13, 2, '2023-11-29 19:30:41');
 
@@ -268,6 +297,7 @@ INSERT INTO `mybooks` (`userid`, `bookid`) VALUES
 (12, 66),
 (12, 70),
 (12, 82),
+(12, 83),
 (13, 36),
 (13, 37);
 
@@ -326,8 +356,8 @@ CREATE TABLE `thuvien` (
 --
 
 INSERT INTO `thuvien` (`id`, `name`, `note`, `img`, `rate`, `dodai`, `theloai`, `luotdoc`, `gioithieu`, `ngaydang`) VALUES
-(1, 'Nhà Giả Kim', 'Paulo Coelho', 'img1.jpg', 4.5, 13, 'phieuluu langman', 73, '“Nhà Giả Kim” là một trong những tác phẩm hay nhất của tác giả Paulo Coelho. Cuốn sách bắt đầu bằng câu chuyện xoay quanh cậu bé chăn cừu có tên Santiago trong chuyến hành trình đi tìm kho báu của mình. Xuyên suốt chuyến phiêu lưu để theo đuổi giấc mơ của Santiago, bạn đọc có thể thấy cậu bé đã trải qua nhiều gian khổ và nguy hiểm. Nhưng với khát khao thực hiện ước mơ, cậu bé đã không từ bỏ và vượt qua mọi thách thức. Cuộc hành trình dài này đã giúp cậu bé nhận ra nhiều bài học đáng quý cũng như mục đích và ý nghĩa cuộc đời mình. Thông qua những bài học đó, mỗi cá nhân người đọc cũng rút ra được những bài học, chân lý riêng cũng như nhìn nhận lại những thiếu sót của bản thân để thay đổi và phát triển hoàn thiện nhất.', '2023-11-14 21:57:07'),
-(2, 'Ông già và biển cả', 'Ernest Hemingway', 'img3.jpg', 4.5, 2, 'phieuluu doithuong tieuthuyet', 7, 'Ông già và Biển cả (tên tiếng Anh: The Old Man and the Sea) là một tiểu thuyết ngắn được Ernest Hemingway viết ở Cuba năm 1951 và xuất bản năm 1952. Nó là truyện ngắn dạng viễn tưởng cuối cùng được viết bởi Hemingway. Đây cũng là tác phẩm nổi tiếng và là một trong những đỉnh cao trong sự nghiệp sáng tác của nhà văn. Tác phẩm này đoạt giải Pulitzer cho tác phẩm hư cấu năm 1953. Nó cũng góp phần quan trọng để nhà văn được nhận Giải Nobel văn học năm 1954.', '2023-11-14 21:57:07'),
+(1, 'Nhà Giả Kim', 'Paulo Coelho', 'img1.jpg', 4.5, 13, 'phieuluu langman', 78, '“Nhà Giả Kim” là một trong những tác phẩm hay nhất của tác giả Paulo Coelho. Cuốn sách bắt đầu bằng câu chuyện xoay quanh cậu bé chăn cừu có tên Santiago trong chuyến hành trình đi tìm kho báu của mình. Xuyên suốt chuyến phiêu lưu để theo đuổi giấc mơ của Santiago, bạn đọc có thể thấy cậu bé đã trải qua nhiều gian khổ và nguy hiểm. Nhưng với khát khao thực hiện ước mơ, cậu bé đã không từ bỏ và vượt qua mọi thách thức. Cuộc hành trình dài này đã giúp cậu bé nhận ra nhiều bài học đáng quý cũng như mục đích và ý nghĩa cuộc đời mình. Thông qua những bài học đó, mỗi cá nhân người đọc cũng rút ra được những bài học, chân lý riêng cũng như nhìn nhận lại những thiếu sót của bản thân để thay đổi và phát triển hoàn thiện nhất.', '2023-11-14 21:57:07'),
+(2, 'Ông già và biển cả', 'Ernest Hemingway', 'img3.jpg', 4.5, 2, 'phieuluu doithuong tieuthuyet', 9, 'Ông già và Biển cả (tên tiếng Anh: The Old Man and the Sea) là một tiểu thuyết ngắn được Ernest Hemingway viết ở Cuba năm 1951 và xuất bản năm 1952. Nó là truyện ngắn dạng viễn tưởng cuối cùng được viết bởi Hemingway. Đây cũng là tác phẩm nổi tiếng và là một trong những đỉnh cao trong sự nghiệp sáng tác của nhà văn. Tác phẩm này đoạt giải Pulitzer cho tác phẩm hư cấu năm 1953. Nó cũng góp phần quan trọng để nhà văn được nhận Giải Nobel văn học năm 1954.', '2023-11-14 21:57:07'),
 (3, 'Chúa tể của những chiếc nhẫn', 'J. R. R. Tolkien', 'img4.jpg', 5, 6, 'phieuluu langman', 1, 'Cuốn sách Chúa tể của những chiếc nhẫn (tựa Tiếng Anh: The Lord of the Rings) được tác giả J.R.R Tolkien sáng tác và chia ra làm ba phần nhưng nội dung vẫn liên quan chặt chẽ với nhau.\r\nNội dung câu chuyện được lấy bối cảnh tại một vùng đất được tác giả tưởng tượng ra có tên là Middle Earth, hoặc với tên gọi khác là vùng Trung địa. Tại nơi đây, chính là nơi sinh sống của rất nhiều giống loài, bộ tộc đặc biệt và khác nhau, có thể kể đến như người bình thường, người lùn (Hobbit), pháp sư (Wizard), yêu tinh (Goblin), người tiên (Elf), chim ưng (Eagle)... Chính những bộ tộc này đã cùng nhau kết hợp và liên minh với nhau để loại trừ chiếc nhẫn của chúa tể bóng đêm Sauron. \r\n', '2023-11-14 21:57:07'),
 (4, 'Don Quixote', 'Miguel de Cervantes Saavedra', 'img5.jpg', 4, 75, 'phieuluu', 1, 'Được xuất bản thành hai phần vào năm 1605 và 1615, đây là câu chuyện về Alonso Quijano, một quý tộc nghèo sa sút người Tây Ban Nha thế kỷ 16, người say mê đọc sách đến mức bỏ nhà ra đi để tìm kiếm những cuộc phiêu lưu hào hiệp của riêng mình. Ông tự phong cho mình là kỵ sĩ: Don Quixote xứ Mancha. Bằng cách mô phỏng những nhân vật anh hùng văn học mà mình ngưỡng mộ, ông tìm thấy ý nghĩa mới trong cuộc sống của mình: giúp đỡ những người khốn khổ gặp nạn, chiến đấu với những người khổng lồ và đấu tranh với những sai trái — hầu hết [những điều đó] đều diễn ra trong đầu của ông.', '2023-11-14 21:57:07'),
 (5, 'Chiến tranh và hoà bình', 'Lev Tolstoy', 'img6.jpg', 4.5, 25, 'nghethuat tieusu', 1, 'Khi quân đội của Napoleon xâm lược, Tolstoy theo chân một cách xuất sắc các nhân vật có xuất thân khác nhau – nông dân và quý tộc, thường dân và binh lính – khi họ đấu tranh với những vấn đề độc đáo của thời đại, lịch sử và văn hóa của họ. Và khi cuốn tiểu thuyết tiếp tục phát triển, những nhân vật này vượt lên trên tính cụ thể của họ, trở thành một số nhân vật – và con người – cảm động nhất trong văn học thế giới.\r\nChiến tranh và Hòa bình đã có ảnh hưởng lớn lao đối với sự phát triển của văn học Xô Viết và Tây Âu nói riêng, văn học thế giới nói chung. Bởi từ khi ra đời tới nay, bộ tiểu thuyết đã được xuất bản hàng nghìn lần bằng nhiều thứ tiếng khác nhau.\r\n', '2023-11-14 21:57:07'),
@@ -399,7 +429,8 @@ INSERT INTO `thuvien` (`id`, `name`, `note`, `img`, `rate`, `dodai`, `theloai`, 
 (71, 'Đồng Dao Thơ-Truyện', 'Nhà xuất bản Phụ Nữ', 'baikiemtragiuaki/te11.jpg', 4, 30, 'nghethuat sachgiaokhoa', 0, NULL, '2023-11-14 21:57:07'),
 (72, 'Bí ẩn về Vũ Trụ', 'Biên dịch: SONG LINH', 'baikiemtragiuaki/te12.jpg', 4, 30, 'khoahoc sachgiaokhoa nghethuat', 0, NULL, '2023-11-14 21:57:07'),
 (81, 'tieng nhat 2', 'mi`', 'baikiemtragiuaki/Screenshot 2023-11-30 171642.png', 0, 15, ' phieuluu langman doithuong tieuthuyet', 2, 'ád', '2023-12-02 22:21:03'),
-(82, 'Think n grow rich', 'nặc danh', 'trangbia/khongbietten_10.png', 0, 50, ' doithuong tieuthuyet treem', 9, 'làm giàu không khó', '2023-12-08 23:19:10');
+(82, 'Think n grow rich', 'nặc danh', 'trangbia/khongbietten_10.png', 0, 50, ' doithuong tieuthuyet treem', 9, 'làm giàu không khó', '2023-12-08 23:19:10'),
+(83, 'Don ki ho te', 'Saavedra', 'trangbia/don_kihote_1.png', 0, 50, ' phieuluu tieuthuyet', 1, 'Sách hay', '2023-12-09 19:17:50');
 
 -- --------------------------------------------------------
 
@@ -455,6 +486,13 @@ ALTER TABLE `cmt`
   ADD PRIMARY KEY (`id`),
   ADD KEY `userid` (`userid`),
   ADD KEY `bookid` (`bookid`);
+
+--
+-- Indexes for table `danhsachyeuthich`
+--
+ALTER TABLE `danhsachyeuthich`
+  ADD PRIMARY KEY (`userid`,`bookid`),
+  ADD KEY `danhsachyeuthich_ibfk_1` (`bookid`);
 
 --
 -- Indexes for table `diendan`
@@ -523,7 +561,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `cmt`
 --
 ALTER TABLE `cmt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `diendan`
@@ -535,7 +573,7 @@ ALTER TABLE `diendan`
 -- AUTO_INCREMENT for table `sachcho`
 --
 ALTER TABLE `sachcho`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
@@ -553,6 +591,13 @@ ALTER TABLE `booktype`
 ALTER TABLE `cmt`
   ADD CONSTRAINT `cmt_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `account` (`ID`),
   ADD CONSTRAINT `cmt_ibfk_3` FOREIGN KEY (`bookid`) REFERENCES `thuvien` (`id`);
+
+--
+-- Constraints for table `danhsachyeuthich`
+--
+ALTER TABLE `danhsachyeuthich`
+  ADD CONSTRAINT `danhsachyeuthich_ibfk_1` FOREIGN KEY (`bookid`) REFERENCES `thuvien` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `danhsachyeuthich_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `account` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `lichsudoc`
