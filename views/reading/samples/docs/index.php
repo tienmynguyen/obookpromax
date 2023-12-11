@@ -9,7 +9,7 @@ setluotdoc($conn, $_SESSION["bookid"]);
 echo '<script>';
 echo 'var bookid = "' . $_SESSION['bookid'] . '";';
 echo '</script>';
-if(isset($_SESSION["id"])){
+if(isset($_SESSION["id"]) && isset($_SESSION['is_login'])){
   setlichsudoc($conn, $_SESSION["bookid"], $_SESSION["id"]);
 }
 
