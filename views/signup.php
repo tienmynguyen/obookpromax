@@ -9,7 +9,7 @@ require("../controller/functions.php");
 
 if (!isset($_POST['dangki'])) {
     
-    header("location:http://localhost:3000/views/index.php");
+    header("location: /");
     exit;
 }
 
@@ -22,8 +22,9 @@ $pass = validateField($_POST['pass']);
 $phone = validateField($_POST['phonenumber']);
 
 if ($name === "" || $pass === "" || $email ==="" || $phone === "") {
-    
-    header("location:http://localhost:3000/views/index.php");
+     $error_message = "vui lòng nhập đầy đủ thông tin để tiến hành đăng ký";
+    setcookie('signup_error', $error_message, time() + 5, '/'); 
+    header("location: /");
     exit;
 }
 $query1 = "SELECT email, pass from account";
@@ -33,8 +34,10 @@ $result1 = mysqli_query($conn, $query1);
 while($row = mysqli_fetch_assoc($result1)){
     
     if ($email == $row['email']) {
-        echo "email da duoc dang ki truoc do";
-      
+        $error_message = "email đã được đăng ký trước đó";
+        setcookie('signup_error', $error_message, time() + 5, '/'); 
+        
+      header("location: /");
        
     }
 }
@@ -46,39 +49,14 @@ if (!$result) {
     echo "Empty data " . mysqli_error($conn);
     exit;
 }else {
-    echo "dang ki thanh cong vui long dang nhap";
+    $error_message = "Đăng ký tài khoản thành công";
+    setcookie('signup_error', $error_message, time() + 5, '/'); 
     
 }
-
+header("location: /");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <br>
-    dang ki that bai
-    <br>
-   vui long dang ki lai
-    
-    <a href="/"> tai day</a>
-</body>
-</html>
-<?php 
 
-
-header("Refresh:1; location:http://localhost:3000/views/index.php");
-
-
-// $_SESSION["errorArray"]["adminIncorrect"] = "Username or Password is Wrong. Try to Enter Correct Data";
-//         header("url=http://localhost:3000/views/index.php");
-//         $_SESSION['admin'] = false;
-//         exit;
-?>
 
 
 

@@ -1,4 +1,23 @@
+<?php 
 
+if (isset($_COOKIE['login_error'])) {
+    // Hiển thị thông báo lỗi
+    $error_message = $_COOKIE['login_error'];
+    echo "<p style = 'position: absolute;'>$error_message</p>";
+    
+    // Xóa cookie để không hiển thị lại thông báo lỗi khi refresh trang
+    setcookie('login_error', '', time() - 3600, '/');
+}
+if (isset($_COOKIE['signup_error'])) {
+    // Hiển thị thông báo lỗi
+    $error_message = $_COOKIE['signup_error'];
+    echo "<p style = 'position: absolute;'>$error_message</p>";
+    
+    // Xóa cookie để không hiển thị lại thông báo lỗi khi refresh trang
+    setcookie('signup_error', '', time() - 3600, '/');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +35,7 @@
     <link rel="stylesheet" href="/views/css/login.css" />
 </head>
 
-<body>
+<body style="">
     <div class="section">
         <div id="ball1" class="d-none d-xl-block bg-ball">
 

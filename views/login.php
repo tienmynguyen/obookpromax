@@ -2,7 +2,7 @@
 
 session_start();
 ob_start();
-
+$_SESSION['is_login'] = false;
 require("../controller/functions.php");
 
 // todo : validations needed for admin verification
@@ -10,9 +10,10 @@ require("../controller/functions.php");
 if (!isset($_POST['dangnhap'])) {
     
     $_SESSION["errorArray"]["adminError"] = "Cannot Let You Enter Admin Area. Try Entering Data";
-    header("location:");
+    header("location: /");
     exit;
 }
+
 
 require_once "../controller/database_functions.php";
 $conn = db_connect();
@@ -22,8 +23,9 @@ $pass = validateField($_POST['pass']);
 
 if ($name === "" || $pass === "") {
     
-    $_SESSION["errorArray"]["adminEmpty"] = "email or Password is Blank. Try to Enter Some Valid Data";
-    header("url=");
+    $error_message = "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.";
+    setcookie('login_error', $error_message, time() + 5, '/'); 
+    header("location: /");
     exit;
 }
 
@@ -67,34 +69,14 @@ while($row = mysqli_fetch_assoc($result)){
         ob_end_flush();
     }
 }
+if($_SESSION['is_login']==false ){
+    $error_message = "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.";
+    setcookie('login_error', $error_message, time() + 5, '/'); 
+    header("location: /");
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    sai ten dang nhap hoac mat khau
-    <br>
-    vui long nhap lai
-    
-    <a href="/"> tai day</a>
-</body>
-</html>
-<?php 
 
-
-
-
-
-// $_SESSION["errorArray"]["adminIncorrect"] = "Username or Password is Wrong. Try to Enter Correct Data";
-//         header("url=http://localhost:3000/views/index.php");
-//         $_SESSION['admin'] = false;
-//         exit;
-?>
 
 
 
