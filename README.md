@@ -3,17 +3,17 @@
 
 tài khoản người dùng 🥷:
 ```
-email: test2@gmail.com
+test2@gmail.com
 ```
 ```
-pass: 123123
+123123
 ```
 tài khoản admin 👷‍♂️:
 ```
-email: tienmy@gmail.com
+tienmy@gmail.com
 ```
 ```
-pass: 123
+123
 ```
 Trải nghiệm trước tại:  [Obooks](https://obookspromax.000webhostapp.com/trangchu).
 
