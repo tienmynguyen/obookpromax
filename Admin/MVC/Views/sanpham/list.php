@@ -14,6 +14,8 @@
       <th scope="col">Tên sách</th>
       <th scope="col">Tác giả</th>
       <th scope="col">Độ dài</th>
+      <th scope="col">Time Upload</th>
+      <th scope="col">File</th>
       <th scope="col">Giới thiệu</th>
       <th>#</th>
     </tr>
@@ -25,9 +27,11 @@
         <td><?= $row['name'] ?></td>
         <td><?= $row['note'] ?></td>
         <td><?= $row['dodai'] ?></td>
+        <td><?= $row['ngaydang'] ?></td>
+        <td><a href="../views/reading/samples/docs/sach/<?php echo $row['id']?>.pdf">pdf</a></td>
         <td><?= $row['gioithieu'] ?></td>
         <td>
-          <a href="../index.php?act=detail&id=<?= $row['id'] ?>" type="button" class="btn btn-success" target="_blank">Xem</a>
+          
           <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
           <a href="?mod=sanpham&act=edit&id=<?= $row['id'] ?>" type="button" class="btn btn-warning">Sửa</a>
           <a href="?mod=sanpham&act=delete&id=<?= $row['id'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>

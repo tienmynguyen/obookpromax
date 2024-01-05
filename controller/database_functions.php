@@ -225,7 +225,39 @@ function setluotdoc($conn,$id){
         exit;
     }
 }
-
+function cmtyeuthich($conn,$id){
+    $query = "SELECT * FROM cmt where id= ".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+    $luotthich = $result->fetch_assoc();
+    $luotthich["love"] = $luotthich["love"] + 1;
+    $query = "update cmt set love = ".$luotthich["love"]." where id =".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+}
+ function cmtreport($conn, $id, $text){
+     $query = "SELECT * FROM cmt where id= ".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+    $report = $result->fetch_assoc();
+    $report["report"] = $report["report"] + 1;
+    $report["ctreport"] = $report["ctreport"] . $report["report"] . " " . $text."   <br>"; 
+    $query = "update cmt set report = ".$report["report"].", ctreport = '".$report['ctreport']."' where id =".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo "Can't retrieve data " . mysqli_error($conn);
+        exit;
+    }
+ }
 function setlichsudoc($conn, $bookid, $userid)
 { 
     $query = "select * from lichsudoc where bookid = '" . $bookid . "' and userid = '" . $userid . "'";
@@ -273,6 +305,7 @@ function setyeuthich($conn, $bookid, $userid)
     }
    
 }
+
 
 
 function getlichsudoc($conn,$userid){

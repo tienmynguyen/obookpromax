@@ -116,4 +116,27 @@ class Model
          $status = $this->conn->query($sql);
          
     }
+
+    function viewreport(){
+         $query = "select c.*,a.user,b.name from account a join cmt c on a.id = c.userid 
+         join thuvien b on c.bookid = b.id group by c.id having c.report >=1
+
+         ";
+        require("result.php");
+        return $data;
+    }
+
+     function ban($id){
+         $query = " update account set bandate = NOW() where id= ".$id;
+       $result = $this->conn->query($query);
+        
+        if ($result == true) {
+            setcookie('msg', 'Ban thành công', time() + 2);
+            header('Location: ?mod=' . $this->table);
+        } else {
+            setcookie('msg', 'Ban vào không thành công', time() + 2);
+            header('Location: ?mod=' . $this->table );
+        }
+    }
+    
 }

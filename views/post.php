@@ -172,7 +172,7 @@ $page = "post";
     <div class="stackmain2">
         <div class="light3 col-12 d-none d-lg-block" style="height: 15vh; top: 0; position: fixed; z-index: 90; opacity: 0.4"></div>
 
-        <div class="row discenter" style="margin: 0 auto !important;">
+        <div class="row " >
             <!-- navbar -->
             <?php
 
@@ -181,7 +181,8 @@ $page = "post";
             ?>
             <!-- navbar -->
             <!-- center -->
-            <div class="col-12 col-lg-8 row discenter p-lg-5" style="align-items: center;">
+            <center>
+                <div class="col-12 col-lg-8 row discenter p-lg-5" style="align-items: center;">
                 <div id="main-contend-body-post">
 
                 </div>
@@ -377,6 +378,7 @@ $page = "post";
                 </div>
 
             </div>
+            </center>
 
             <!-- /center -->
 

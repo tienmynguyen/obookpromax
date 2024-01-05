@@ -138,6 +138,7 @@
                           break;
                       }
                       break;
+                     
                     case 'loaisanpham':
                       switch ($act) {
                         case 'list':
@@ -209,6 +210,16 @@
                           break;
                         default:
                           require_once('MVC/Views/duyetsach/list.php');
+                          break;
+                      }
+                      break;
+                      case 'cmt':
+                      switch ($act) {
+                        case 'list':
+                          require_once('MVC/Views/cmt/list.php');
+                          break;
+                        default:
+                          require_once('MVC/Views/cmt/list.php');
                           break;
                       }
                       break;

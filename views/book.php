@@ -29,6 +29,21 @@ ob_start();
     unset($_POST['yeuthich']);
     }
 
+    $sql2 = "SELECT * FROM `cmt`";
+    $result2 = $conn->query($sql2);
+    while($row2 = $result2->fetch_assoc()){
+         if(isset($_POST['cmtyeuthich'.$row2['id']])){
+        unset($_POST['cmtyeuthich' . $row2['id']]);
+        cmtyeuthich($conn, $row2['id']);
+        header("Refresh:0");
+    }
+        if(isset($_POST['cmtreport'.$row2['id']])){
+        unset($_POST['cmtreport' . $row2['id']]);
+        cmtreport($conn, $row2['id'], $_POST['cmt'.$row2['id']]);
+        header("Refresh:0");
+        }
+    }
+   
      ?>
 
 
@@ -264,14 +279,16 @@ ob_start();
                                         Bình luận
                                     </div>
 
-                                    <div class="comment-session">
+                                    <div class="comment-session" >
                                         <!-- one post comment -->
-                                        <?php 
+                                        <div style="overflow: scroll; height: 300px;">
+                                            <?php 
                                         
                                         while($row = $rscmt->fetch_assoc()){
                                             $rsuser = getuser($conn, $row['userid']);
                                             $user = $rsuser->fetch_assoc();
                                             ?>
+                                            
                                             <div class="post-comment">
                                             <div class="list pcomment">
                                                 <div class="user">
@@ -283,9 +300,40 @@ ob_start();
                                                         <div class="day"><?php echo $row['date']?></div>
                                                     </div>
                                                 </div>
-                                                <div class="comment-post">
+                                                <div class="d-flex">
+                                                    <div  class="comment-post col-8">
                                                     <?php echo $row['cmt']?>
                                             </div>
+                                            <div style="color: red;" class="comment-post col-2 d-flex gap-2">
+                                                  
+                                                    <?php echo $row['love']?>
+                                                    <form action="" method="post">
+                                                    <input type="submit" name="cmtyeuthich<?php echo $row['id']?>" id="cmtyeuthich<?php echo $row['id']?>" style="display: none;">
+                                                    <svg onclick="cmtyeuthich('<?php echo $row['id']?>')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-heart-fill" viewBox="0 0 16 16">
+                                                    <path d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                                                    </svg>
+                                                    </form>
+                                                   
+                                                    
+
+
+
+                                            </div>
+                                            <div  class="comment-post col-1">
+
+                                                    <form id="cmtreport<?php echo $row['id']?>" style="display: none;" action="" method="post">
+                                                        <input type="text" name="cmt<?php echo $row['id']?>">
+                                                        <input type="submit" name="cmtreport<?php echo $row['id']?>" >
+                                                    </form>
+
+                                                    <svg onclick="cmtreport('<?php echo $row['id']?>')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-angry-fill" viewBox="0 0 16 16">
+                                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M4.053 4.276a.5.5 0 0 1 .67-.223l2 1a.5.5 0 0 1 .166.76c.071.206.111.44.111.687C7 7.328 6.552 8 6 8s-1-.672-1-1.5c0-.408.109-.778.285-1.049l-1.009-.504a.5.5 0 0 1-.223-.67zm.232 8.157a.5.5 0 0 1-.183-.683A4.5 4.5 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 1 1-.866.5A3.5 3.5 0 0 0 8 10.5a3.5 3.5 0 0 0-3.032 1.75.5.5 0 0 1-.683.183M10 8c-.552 0-1-.672-1-1.5 0-.247.04-.48.11-.686a.502.502 0 0 1 .166-.761l2-1a.5.5 0 1 1 .448.894l-1.009.504c.176.27.285.64.285 1.049 0 .828-.448 1.5-1 1.5"/>
+                                                    </svg>
+
+
+
+                                            </div>
+                                                </div>
                                             </div>
                                         </div>
                                             <?php
@@ -295,6 +343,7 @@ ob_start();
                                         
                                         
                                         ?>
+                                        </div>
                                         <!-- one post comment -->
                                         
 
@@ -1048,6 +1097,17 @@ ob_start();
                 //   hreftext2.style.color = "violet";
                 //   check1 = false;
                 // }
+            }
+            function cmtyeuthich(data){
+                var id = 'cmtyeuthich'+data;
+                var submit =document.getElementById(id);
+                
+                submit.click();
+            }
+            function cmtreport(data){
+                 var id = 'cmtreport'+data;
+                 var thisReport = document.getElementById(id);
+                 thisReport.style.display = 'block';
             }
         </script>
 

@@ -226,6 +226,24 @@ if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) {
                     break;
             }
             break;
+            case 'cmt':
+            require_once('MVC/controllers/cmtController.php');
+            $controller_obj = new CmtController();
+            switch ($act) {
+                case 'list':
+                    $controller_obj->list();
+                    break;
+                case 'delete':
+                    $controller_obj->delete();
+                    break;
+                case 'ban':
+                     $controller_obj->ban();
+                    break;
+                default:
+                    $controller_obj->list();
+                    break;
+            }
+            break;
             case 'booktype':
             require_once('MVC/controllers/BooktypeController.php');
             $controller_obj = new BooktypeController();

@@ -33,7 +33,7 @@ class DuyetsachController
         // $this->duyetsach_model->update($data);
        
         
-           $maxid = $this->duyetsach_model->getmaxid() ;
+        $maxid = $this->duyetsach_model->getmaxid() ;
         $max = $maxid['max(id)'] + 1;
         
         $data2 = $this->duyetsach_model->find($_GET['id']);

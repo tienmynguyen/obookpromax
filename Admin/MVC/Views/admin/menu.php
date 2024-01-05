@@ -62,6 +62,12 @@
 </li>
 
 <li class="nav-item">
+  <a class="nav-link" href="?mod=cmt">
+    <i class="fas fa-fw fa-table"></i>
+    <span>comments report</span></a>
+</li>
+
+<li class="nav-item">
   <a class="nav-link" href="?mod=booktype">
     <i class="fas fa-fw fa-table"></i>
     <span>Book type</span></a>

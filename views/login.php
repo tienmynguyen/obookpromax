@@ -45,9 +45,19 @@ if (!$result) {
 
 while($row = mysqli_fetch_assoc($result)){
     
-    if ($name == $row['email'] && $pass == $row['pass']) {
+    if ($name == $row['email'] && $pass == $row['pass'] ) {
+        
+        if($row['bandate']!=NULL){
+            $now = new DateTime();
+        
+        $bandate = new DateTime($row['bandate']);
+        $interval = $now->diff($bandate);
+        $daysDifference = $interval->days;
 
-        setcookie("email", $name , time()+60);
+            if($daysDifference < 30){
+                $banday = 30 - $daysDifference;
+            }else{
+                setcookie("email", $name , time()+60);
         setcookie("pass", $pass , time()+60);
         $_SESSION['email'] = $name;
         $_SESSION['pass'] = $pass;
@@ -67,10 +77,36 @@ while($row = mysqli_fetch_assoc($result)){
         
         header("location: /trangchu");
         ob_end_flush();
+            }
+        }else{
+            setcookie("email", $name , time()+60);
+        setcookie("pass", $pass , time()+60);
+        $_SESSION['email'] = $name;
+        $_SESSION['pass'] = $pass;
+        $_SESSION['avt'] = $row['avt'];
+        $_SESSION['name'] = $row['user'];
+        $_SESSION['id'] = $row['ID'];
+        $_SESSION['is_login'] = true;
+        if (isset($conn)) {
+            mysqli_close($conn);
+        }
+        if($row['role']!=0){
+            $_SESSION['isLogin_Admin'] = true;
+            
+        }else{
+             $_SESSION['isLogin_Admin'] = false;
+        }
+        
+        header("location: /trangchu");
+        ob_end_flush();
+        }
     }
 }
 if($_SESSION['is_login']==false ){
     $error_message = "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.";
+    if(isset($banday)){
+         $error_message = "Tài khoản của bạn đã bị khoá. Vui lòng quay lai sau: ".$banday." ngày";
+    }
     setcookie('login_error', $error_message, time() + 5, '/'); 
     header("location: /");
 }
