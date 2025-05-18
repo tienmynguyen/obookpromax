@@ -20,8 +20,9 @@ The website also includes an **Admin Dashboard** for managing all necessary info
 
 ## ⚙️ Installation Guide
 1. Clone or download the repository:
+ ```bash
 git clone https://github.com/tienmynguyen/obookpromax.git
-
+ ```
 markdown
 Copy
 Edit
